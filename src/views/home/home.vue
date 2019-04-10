@@ -12,10 +12,11 @@
                alt=""></li>
       </ul>
     </div>
-    <div class="intro">
+    <div class="intro wrap"
+         @click="blowimg">
       <img src="../../images/intro.png"
            alt=""
-           class="intro_img">
+           class="intro_img zoomify">
       <div class="intro_text">
         <p class="intro_title">为农村厕所革命和生态文明建设做出贡献</p>
         <p>生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
@@ -49,6 +50,15 @@ export default {
     CommonHead,
     CommonFoot,
     Swiper
+  },
+  created () {
+    console.log(zoomifyJs)
+  },
+  methods: {
+    blowimg () {
+      console.log($('img.intro_img').zoomify())
+      $('img.intro_img').zoomify();
+    }
   }
 }
 </script>
@@ -73,6 +83,7 @@ export default {
   margin-top: 0;
   width: 100%;
   position: relative;
+  pointer-events: auto;
   .intro_img {
     width: 100%;
   }

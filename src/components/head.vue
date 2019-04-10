@@ -23,6 +23,7 @@
           v-if="item.tab_C!=='产品中心'">
         <router-link :to="'/'+item.tab_E"
                      class="dropdown-toggle">{{item.tab_C}}</router-link>
+        <div class="line"></div>
       </li>
       <li v-else
           class="dropdown">
@@ -94,5 +95,38 @@ export default {
 .dropdown-menu > li > a:hover {
   background: #fff;
   color: #1aa8aa;
+}
+.router-link-exact-active {
+  border-bottom: 2px solid #40f2d0;
+}
+.nav > li > a {
+  padding: 10px 0;
+  margin: 0 15px;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+  }
+}
+.navbar {
+  margin-bottom: 0px;
+  border: none;
+}
+.navbar-right {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .navbar-right {
+    padding-right: 239px;
+  }
+}
+.dropdown-menu > li > a {
+  padding: 12px 26px;
+}
+@media (min-width: 768px) {
+  .navbar-right .dropdown-menu {
+    right: auto;
+  }
 }
 </style>

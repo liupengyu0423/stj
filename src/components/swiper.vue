@@ -59,5 +59,9 @@ export default {
     width: 100%;
     height: 100%;
   }
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    background-image: url('../images/next.jpg');
+  }
 }
 </style>

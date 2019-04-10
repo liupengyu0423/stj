@@ -6,7 +6,9 @@ import router from './router'
 import './style/base.css'
 import './style/common.css'
 import 'swiper/dist/css/swiper.css';
+import zoomifyJs from './config/zoomify.min.js'
 Vue.config.productionTip = false
+window.zoomifyJs = zoomifyJs
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
