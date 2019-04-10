@@ -156,7 +156,7 @@ export default {
         { text: '院士工作站', img: require('../../images/news.png') },
         { text: '国家级科技进步奖', img: require('../../images/news.png') },
         { text: '世界厕所大赛表扬奖', img: require('../../images/news.png') },
-        { text: '中国专利山东明星企业证书', img: require('../../images/news.png') }
+        { text: '中国专利山东明星企业证书', img: require('../../images/news.png') },
       ]
     }
   },
