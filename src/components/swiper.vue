@@ -61,7 +61,15 @@ export default {
   }
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
-    background-image: url('../images/next.jpg');
+    background-image: url("../images/prev.png");
+  }
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background-image: url("../images/next.png");
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-size: 27px 36px;
   }
 }
 </style>
