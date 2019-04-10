@@ -57,6 +57,18 @@ export default new Router({
     name: 'washroom',
     component: () => import('@/views/product/washroom'),
     meta: '产品中心'
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/about/about'),
+    meta: '关于我们'
+  },
+  {
+    path: '/net',
+    name: 'net',
+    component: () => import('@/views/net+/net+'),
+    meta: '互联网+'
   }
   ]
 })
