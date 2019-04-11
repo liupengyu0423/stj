@@ -51,6 +51,8 @@ footer {
   max-height: 500px;
   background: #2a2f2f;
   padding: 2.3em 3.5em 0 2.3em;
+  // position: fixed;
+  // bottom: 0;
   > div {
     display: inline-block;
     vertical-align: top;

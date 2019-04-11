@@ -46,7 +46,8 @@
           <li class="instro-radius">
             <h4>ISO</h4>
             <p>体系认证</p>
-            <p><strong>3</strong>个</p>
+            <p>
+              <strong>3</strong>个</p>
           </li>
           <li class="instro-radius">
             <h4>50+</h4>
@@ -55,7 +56,8 @@
           <li class="instro-radius">
             <p>核心技术</p>
             <p>列入国家</p>
-            <p><strong>863</strong>计划</p>
+            <p>
+              <strong>863</strong>计划</p>
           </li>
         </ul>
       </div>
@@ -89,7 +91,10 @@
       <img src="../../images/map.png"
            alt=""
            class="img-responsive center-block">
-      <div><span class="spure"></span><span class="spure_text">已安装的省份</span></div>
+      <div>
+        <span class="spure"></span>
+        <span class="spure_text">已安装的省份</span>
+      </div>
     </div>
     <div class="container-fluid map">
       <h4>新闻中心</h4>
@@ -166,7 +171,6 @@ export default {
     Swiper
   },
   created () {
-    console.log(zoomifyJs)
   },
   methods: {
     blowimg () {
@@ -201,7 +205,7 @@ export default {
   width: 100%;
   position: relative;
   pointer-events: auto;
-  background: url("../../images/intro.png") no-repeat;
+  background: url('../../images/intro.png') no-repeat;
   background-size: cover;
   .intro_img {
     width: 100%;
@@ -232,7 +236,7 @@ export default {
     #ebf4f4 100%
   );
   .scheme_left {
-    background: url("../../images/product.png") no-repeat;
+    background: url('../../images/product.png') no-repeat;
     background-size: contain;
   }
 }
@@ -424,13 +428,11 @@ export default {
     bottom: 0px;
     background: rgba(255, 255, 255, 0.88);
     width: 100%;
-    padding-left: 20px;
-    height: 40px;
-    line-height: 40px;
+    padding: 3%;
     h5 {
       color: #303030;
-      height: 40px;
-      line-height: 40px;
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
     }
   }
   .more {

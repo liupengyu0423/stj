@@ -39,19 +39,29 @@ export default {
 <style lang="scss" scoped>
 .detail {
   .container {
+    margin-bottom: 180px;
     h4 {
       text-align: center;
+      padding: 44px 0 17px;
+      font-family: PingFangSC-Regular;
+      font-size: 19px;
+      color: #000000;
     }
     .detail_mid {
       display: flex;
       justify-content: space-between;
       span {
+        font-family: PingFangSC-Light;
         font-size: 14px;
         color: #7a7e7c;
       }
     }
+    .img-responsive {
+      margin-top: 35px;
+    }
     .data_detail {
       margin: 45px 0 20px 0;
+      font-family: PingFangSC-Light;
     }
   }
 }

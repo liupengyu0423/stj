@@ -2,7 +2,7 @@
   <div class="unify">
     <CommonHead />
     <div class="container-fluid">
-      <div class="col-lg-">
+      <div class="col-lg- xi-col-lg-">
         <div class="row row_col1">
           <div class="col-lg-0 col-lg-4 col-md-4 col-sm-6 col-xs-10">
             <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
@@ -16,13 +16,14 @@
       </div>
       <ul class="nav nav-tabs nav-justified">
         <li role="presentation"
-            :class="index===0?'active nav-tabs-hover':'nav-tabs-hover'"
+            :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
             v-for="(item,index) in items"
             :key="index">
-          <a :href="item.href">{{item.name}}</a>
+          <a @click="changeActive(index)">{{item.name}}</a>
         </li>
       </ul>
-      <div class="container responsive-div">
+      <div class="container responsive-div"
+           v-if="click===0">
         <div class="row-lg-1 center-auto">
           <div class="row row_col1">
             <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -40,7 +41,27 @@
           </a>
         </div>
       </div>
-      <div class="container responsive-div2">
+      <div class="container responsive-div"
+           v-if="click===1">
+        <div class="row-lg-1 center-auto">
+          <div class="row row_col1">
+            <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h4>生物环保厕所</h4>
+            </div>
+          </div>
+          <div class="row row_col2">
+            <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br />留物转化成生态有机肥的高科技产品。
+              </p>
+            </div>
+          </div>
+          <a href="/expression">
+            <p class="text-muted">查看应用案例 ></p>
+          </a>
+        </div>
+      </div>
+      <div class="container responsive-div2"
+           v-if="click===0">
         <div class="container">
           <div class="row-lg-2 center-auto">
             <div class="row row_col1">
@@ -57,21 +78,27 @@
           </div>
         </div>
         <div class="row row_list">
-          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
-            <h5><a>一体化</a></h5>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>一体化</a>
+            </h5>
             <ul>
               <li>一机多用，一步到位。</li>
               <li>厕所、厨房、洗浴一体化处理。</li>
             </ul>
           </div>
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5><a>无害化</a></h5>
+            <h5>
+              <a>无害化</a>
+            </h5>
             <ul>
               <li>排放符合《城镇污水处理厂污染物综合排放标准》，出水达到一级 B 标准，彻底解决农村主要污染源。</li>
             </ul>
           </div>
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5><a>智能化</a></h5>
+            <h5>
+              <a>智能化</a>
+            </h5>
             <ul>
               <li>户厕设备由智能物联网 IoT 设备控制驱动，实现故障报警、动态远程控制等功能，与智能管护 App 打通实现高效运维。</li>
             </ul>
@@ -79,32 +106,98 @@
         </div>
         <div class="row row_list">
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5><a>中水与肥效回用</a></h5>
+            <h5>
+              <a>中水与肥效回用</a>
+            </h5>
             <ul>
               <li>设备人性化设计，支持中水回田灌溉、冲厕等。</li>
               <li>支持安全、便捷地肥效回用</li>
             </ul>
           </div>
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
-            <h5><a>性价比高</a></h5>
+            <h5>
+              <a>性价比高</a>
+            </h5>
             <ul>
               <li>无需建设管网，投资少，设备设计寿命 30 年，收益高。</li>
             </ul>
           </div>
-          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-            <h5><a>维护简单</a></h5>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>维护简单</a>
+            </h5>
             <ul>
               <li>自动化故障报警， 平时无需专业人员维修。</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="container responsive-div3">
-        <div class="img-responsive-container">
-          <img :src="click_group===0?require('../../images/single.png'):click_group===1?require('../../images/much.png'):require('../../images/center.png')"
-               alt=""
-               class="img-responsive">
+      <div class="container responsive-div2"
+           v-if="click ===1">
+        <div class="container">
+          <div class="row-lg-2 center-auto">
+            <div class="row row_col1">
+              <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4>产品特点</h4>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row row_list">
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>免除污染</a>
+            </h5>
+            <ul>
+              <li>直接将人的排泄物原位处理，一年可减少36万吨+清洁水</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>经济节能</a>
+            </h5>
+            <ul>
+              <li>运行费用低廉、无须冲水，一年可节水1000吨+，可节约清运、处理费用10000+元</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>安装方便</a>
+            </h5>
+            <ul>
+              <li>无需铺设排污管网，可根据地形随处安放，建设费用低</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row row_list">
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>外形美观</a>
+            </h5>
+            <ul>
+              <li>外观造型和文化色彩具多样性，具有景观效应，提升城市、旅游景区形象</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>用途广泛</a>
+            </h5>
+            <ul>
+              <li>适用于城镇、风景名胜区、广场、公园、居民小区、车站、码头等人员密集场所，以及火车、轮船上</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5>
+              <a>产品多样</a>
+            </h5>
+            <ul>
+              <li>水循环式、泡沫封堵式、水冲式、打包式等多种产品类型</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div v-if="click===0"
+           :class="click_group===0?'container responsive-div3 responsive-div3_single':click_group===1?'container responsive-div3 responsive-div3_much':'container responsive-div3 responsive-div3_center'">
         <div class="list-group">
           <h4>产品类型</h4>
           <a :class="index === click_group?'list-group-item active':'list-group-item'"
@@ -115,10 +208,8 @@
           </a>
         </div>
       </div>
-      <div class="container responsive-div4">
-        <img src="../../images/theory.png"
-             alt=""
-             class="img-responsive">
+      <div class="container responsive-div4"
+           v-if="click===0">
         <div class="col-lg-">
           <div class="row row_col1">
             <div class="col-lg-0 col-lg-4 col-md-4 col-sm-6 col-xs-10">
@@ -132,7 +223,8 @@
           </div>
         </div>
       </div>
-      <div class="container responsive-div5">
+      <div class="container responsive-div5"
+           v-if="click===0">
         <ul>
           <li class="one">
             <h4>处理技术参数</h4>
@@ -148,7 +240,8 @@
           </li>
         </ul>
       </div>
-      <div class="responsive-div6">
+      <div class="responsive-div6"
+           v-if="click===0">
         <h4>应用案例</h4>
         <div class="row">
           <div class="col-sm-6 col-md-4"
@@ -162,7 +255,24 @@
             </div>
           </div>
         </div>
-        <p class="more">查看更多应用案例</p>
+        <p class="more"
+           @click="more">查看更多应用案例</p>
+      </div>
+      <div class="responsive-div6"
+           v-if="click===1">
+        <h4>产品展示</h4>
+        <div class="row">
+          <div class="col-sm-6 col-md-4"
+               v-for="(item,index) in examples"
+               :key="index">
+            <div class="thumbnail">
+              <img :src="item.img">
+              <div class="caption">
+                <h5>{{item.text}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <CommonFoot />
@@ -193,6 +303,9 @@ export default {
     },
     changegroup (index) {
       this.click_group = index
+    },
+    more () {
+      this.$router.push('/expression')
     }
   },
   components: {
@@ -225,24 +338,33 @@ export default {
   padding: 0;
   margin: 0;
   position: relative;
+  margin-bottom: 210px;
 }
-.col-lg- {
+.xi-col-lg-.col-lg- {
   width: 100%;
-  background: url("../../images/unify.png") no-repeat;
+  background: url('../../images/unify.png') no-repeat;
   background-size: cover;
   padding: 90px 0 150px 28px;
 }
-
 .row_col2 {
   margin-top: 2%;
+  p {
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #303030;
+  }
 }
 
 .col-lg-0 h4 {
   color: #1aa8aa;
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
 }
 
 .col-lg-13 p {
   color: #303030;
+  font-family: PingFangSC-Regular;
+  font-size: 9px;
 }
 
 .nav-tabs-hover {
@@ -260,7 +382,7 @@ export default {
 }
 .nav-tabs-hover.active a {
   color: #1aa8aa !important;
-  border-bottom: 1px solid #1aa8aa !important;
+  border-bottom: 2px solid #40f2d0 !important;
 }
 .nav-tabs > li > a {
   border: none;
@@ -287,7 +409,7 @@ export default {
 }
 .responsive-div {
   width: 100%;
-  background: url("../../images/wc.png") #ebf4f4 no-repeat;
+  background: url('../../images/wc.png') #ebf4f4 no-repeat;
   background-size: contain;
   background-position: 90% center;
 }
@@ -303,10 +425,11 @@ export default {
     line-height: 23px;
     h5 {
       font-size: 14px;
-      margin-top: 55px;
+      margin-top: 30px;
       line-height: 40px;
-      width: 80%;
+      width: 70%;
       border-bottom: 1px solid #e1e1e1;
+      font-family: PingFangSC-Semibold;
       a {
         display: inline-block;
         height: 100%;
@@ -317,10 +440,16 @@ export default {
     &:first-of-type {
       h5 {
         margin-top: 0;
+        font-family: PingFangSC-Semibold;
       }
     }
     li {
       font-size: 7px;
+      font-family: PingFangSC-Regular;
+      width: 80%;
+      &:first-of-type {
+        margin-top: 10px;
+      }
     }
     div {
       // margin: 0 90px 60px 0;
@@ -345,9 +474,11 @@ export default {
   }
   .bes_1 h4 {
     font-size: 16px;
+    font-family: PingFangSC-Semibold;
   }
   .bes_2 p {
     font-size: 9px;
+    font-family: PingFangSC-Regular;
   }
 }
 
@@ -355,30 +486,44 @@ export default {
   font-size: 16px;
   color: #303030;
   padding: 60px 0 16px 70px;
+  font-family: PingFangSC-Semibold;
 }
 .bes_2 p {
   font-size: 9px;
   color: #303030;
   padding: 0 0 44px 70px;
+  font-family: PingFangSC-Regular;
 }
 .text-muted {
   font-size: 9px;
   padding: 0 0 85px 70px;
+  font-family: PingFangSC-Light;
 }
 .responsive-div3 {
   width: 100%;
-  .img-responsive-container {
-    background: #ebf4f4;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    float: right;
-  }
+  padding: 60px 0 0 !important;
+  // .img-responsive-container {
+  //   background: #ebf4f4;
+  //   width: 400px;
+  //   height: 400px;
+  //   border-radius: 50%;
+  //   float: right;
+  // }
   .list-group {
-    position: absolute;
     flex-direction: column;
+    padding: 0 0 120px 70px;
+    h4 {
+      margin-bottom: 30px;
+      font-family: PingFangSC-Semibold;
+    }
     .list-group-item {
-      font-size: 16px !important;
+      font-size: 12px !important;
+      width: 110px;
+      color: #a5a5a5;
+      border-bottom: 1px solid #dadada;
+      padding: 13px 0;
+      background: transparent !important;
+      font-family: PingFangSC-Light;
       a.list-group-item,
       button.list-group-item {
         color: #a5a5a5;
@@ -389,21 +534,36 @@ export default {
   .list-group-item.active,
   .list-group-item.active:focus,
   .list-group-item.active:hover {
-    background: #fff !important;
     color: #303030;
     border-bottom: 1px solid #1aa8aa;
   }
 }
+.responsive-div3_single {
+  background: url('../../images/single.png') no-repeat;
+  background-size: contain;
+  background-position: 70% center;
+}
+.responsive-div3_much {
+  background: url('../../images/much.png') no-repeat;
+  background-size: contain;
+  background-position: 70% center;
+}
+.responsive-div3_center {
+  background: url('../../images/center.png') no-repeat;
+  background-size: contain;
+  background-position: 70% center;
+}
 .responsive-div4 {
   width: 100%;
-  background: #e8f6f4;
-  position: relative;
-  .img-responsive {
-    float: right;
-  }
+  background: url('../../images/theory.png') no-repeat #e8f6f4;
+  background-size: contain;
+  background-position: 80% center;
   .col-lg- {
+    width: 100%;
+    padding: 60px 0 370px 70px;
     h4 {
       color: #303030;
+      font-family: PingFangSC-Semibold;
     }
     .col-lg-13 {
       p {
@@ -415,6 +575,7 @@ export default {
 .responsive-div5 {
   width: 100%;
   text-align: center;
+  padding-bottom: 50px !important;
   .one {
     margin-top: 60px;
   }
@@ -424,32 +585,45 @@ export default {
   img {
     margin-top: 20px;
   }
+  h4 {
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+  }
 }
 .responsive-div6 {
-  padding: 2% 10% !important;
+  padding: 60px 10% 50px !important;
   box-sizing: border-box;
+  background: #ebf4f4;
+  // margin-top: 50px;
   h4 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 44px;
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
   }
   .thumbnail {
     position: relative;
     border: none;
+    padding: 0;
   }
   .caption {
     position: absolute;
-    bottom: 3px;
+    bottom: 0;
     background: #1aa8aa;
-    width: 97.5%;
+    width: 100%;
     opacity: 0.8;
+    padding: 3%;
     h5 {
       color: #fff;
+      font-family: PingFangSC-Regular;
+      font-size: 10px;
     }
   }
   .more {
     font-size: 9px;
     color: #747c77;
     text-align: center;
+    font-family: PingFangSC-Light;
   }
 }
 .row {
