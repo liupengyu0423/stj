@@ -1,7 +1,7 @@
 <template>
   <div class="net">
     <CommonHead />
-    <div class="container-fluid container-fluid-top">
+    <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
         <div class="row row_col1">
           <div class="row1 col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -11,8 +11,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
       <div class="col-lg- xi-col-lg-2">
         <div class="row row_col1">
           <div class="row1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
@@ -23,8 +21,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
       <div class="col-lg- xi-col-lg-3">
         <div class="row row_col1">
           <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -35,8 +31,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
       <div class="col-lg- xi-col-lg-4">
         <div class="row row_col1">
           <div class="row1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -85,8 +79,9 @@ export default {
     margin-right: 0;
   }
   .xi-col-lg-.col-lg- {
-    background: url('../../images/net1.png') no-repeat;
+    background: url("../../images/net1.png") no-repeat;
     background-size: cover;
+    width: 100%;
     padding: 168px 0 156px 70px;
     h4 {
       font-family: PingFangSC-Semibold;
@@ -104,7 +99,7 @@ export default {
     }
   }
   .xi-col-lg-2 {
-    background: url('../../images/net2.png') no-repeat;
+    background: url("../../images/net2.png") no-repeat;
     background-size: cover;
     padding: 214px 0 242px 70px;
     text-align: right;
@@ -132,7 +127,7 @@ export default {
     }
   }
   .xi-col-lg-3 {
-    background: url('../../images/net3.png') no-repeat;
+    background: url("../../images/net3.png") no-repeat;
     background-size: cover;
     padding: 214px 0 242px 70px;
     width: 100%;
@@ -156,7 +151,7 @@ export default {
     }
   }
   .xi-col-lg-4 {
-    background: url('../../images/net4.png') no-repeat;
+    background: url("../../images/net4.png") no-repeat;
     background-size: cover;
     padding: 214px 0 242px 70px;
     text-align: right;

@@ -185,6 +185,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.environment .row {
+  display: flex;
+  img {
+    width: 100%;
+  }
+}
 .list-group-item {
   display: inline-block;
   flex: 1;
@@ -205,7 +211,7 @@ export default {
   width: 100%;
   position: relative;
   pointer-events: auto;
-  background: url('../../images/intro.png') no-repeat;
+  background: url("../../images/intro.png") no-repeat;
   background-size: cover;
   .intro_img {
     width: 100%;
@@ -236,7 +242,7 @@ export default {
     #ebf4f4 100%
   );
   .scheme_left {
-    background: url('../../images/product.png') no-repeat;
+    background: url("../../images/product.png") no-repeat;
     background-size: contain;
   }
 }
@@ -259,10 +265,17 @@ export default {
 .list-group-item-p {
   color: #fff;
   position: absolute;
-  top: 35%;
-  font-size: 16px;
+  top: 20%;
+  font-size: 8px;
   width: 100%;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .list-group-item-p {
+    font-size: 16px;
+    position: absolute;
+    top: 35%;
+  }
 }
 .environment {
   .row {

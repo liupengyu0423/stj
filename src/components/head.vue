@@ -100,7 +100,21 @@ export default {
   color: #1aa8aa;
 }
 .router-link-one.router-link-exact-active {
+  text-align: center;
   border-bottom: 2px solid #40f2d0;
+  text-align: center;
+}
+.dropdown-toggle {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #303030;
+    text-align: center;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background: #fff;
+  }
 }
 .nav > li > a {
   padding: 10px 0;
