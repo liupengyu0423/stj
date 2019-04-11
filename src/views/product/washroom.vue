@@ -8,7 +8,7 @@
       <div class="col-lg-">
         <div class="row row_col1">
           <div class="col-lg-0 col-lg-4 col-md-4 col-sm-6 col-xs-10">
-            <h4>响应习主席"厕所革命"的号召<br/>为实施乡村振兴战略贡献力量</h4>
+            <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
           </div>
         </div>
         <div class="row row_col2">
@@ -19,7 +19,7 @@
       </div>
       <ul class="nav nav-tabs nav-justified">
         <li role="presentation"
-            :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
+            :class="index===1?'active nav-tabs-hover':'nav-tabs-hover'"
             v-for="(item,index) in items"
             :key="index">
           <a :href="item.href"
@@ -38,7 +38,7 @@
           </div>
           <div class="row row_col2">
             <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br/>留物转化成生态有机肥的高科技产品。
+              <p>利用经过优化的微生物菌剂，对人体排泄物进行高效分解，并将微量残<br />留物转化成生态有机肥的高科技产品。
               </p>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default {
   name: 'unify',
   data () {
     return {
-      items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'profile' }, { name: '生活污水生物集成处理设备', href: 'message' }, { name: '餐厨垃圾处理设备', href: 'setting' }],
+      items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'washroom' }],
       click: 0,
       list_group_items: ['STJ-单户式', 'STJ-多户式', 'STJ-村集中式'],
       click_group: 0,
@@ -202,13 +202,27 @@ export default {
 .col-lg-13 p {
   color: #303030;
 }
-.nav-tabs-hover.active {
-  color: #1aa8aa;
-  border-bottom: 1px solid #1aa8aa;
+.nav-tabs-hover {
+  padding: 10px 15px;
+  text-align: center;
 }
+
 .nav-tabs-hover a {
   color: #303030 !important;
+  display: inline;
+  // border-bottom: 1px solid #fff;
 }
+.nav-tabs-hover.active {
+  color: #1aa8aa;
+}
+.nav-tabs-hover.active a {
+  color: #1aa8aa !important;
+  border-bottom: 1px solid #1aa8aa !important;
+}
+.nav-tabs > li > a {
+  border: none;
+}
+
 .nav-tabs.nav-justified > li > a {
   border-bottom: none;
 }

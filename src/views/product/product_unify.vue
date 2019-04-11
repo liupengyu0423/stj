@@ -2,13 +2,10 @@
   <div class="unify">
     <CommonHead />
     <div class="container-fluid">
-      <img src="../../images/unify.png"
-           alt=""
-           class="img-responsive">
       <div class="col-lg-">
         <div class="row row_col1">
           <div class="col-lg-0 col-lg-4 col-md-4 col-sm-6 col-xs-10">
-            <h4>响应习主席"厕所革命"的号召<br/>为实施乡村振兴战略贡献力量</h4>
+            <h4>响应习主席"厕所革命"的号召<br />为实施乡村振兴战略贡献力量</h4>
           </div>
         </div>
         <div class="row row_col2">
@@ -19,17 +16,13 @@
       </div>
       <ul class="nav nav-tabs nav-justified">
         <li role="presentation"
-            :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
+            :class="index===0?'active nav-tabs-hover':'nav-tabs-hover'"
             v-for="(item,index) in items"
             :key="index">
-          <a :href="item.href"
-             @click="changeActive(index)">{{item.name}}</a>
+          <a :href="item.href">{{item.name}}</a>
         </li>
       </ul>
       <div class="container responsive-div">
-        <img src="../../images/wc.png"
-             alt=""
-             class="img-responsive">
         <div class="row-lg-1 center-auto">
           <div class="row row_col1">
             <div class="bes_1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -38,7 +31,7 @@
           </div>
           <div class="row row_col2">
             <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p>利用微生物降解原理，对生活污水进行截流、吸附和分解， <br/>最终实现对厕所、生活污水的无害化处理和循环利用。
+              <p>利用微生物降解原理，对生活污水进行截流、吸附和分解， <br />最终实现对厕所、生活污水的无害化处理和循环利用。
               </p>
             </div>
           </div>
@@ -57,49 +50,49 @@
             </div>
             <div class="row row_col2">
               <div class="bes_2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p>与中科院微生物合作，针对中国农村生活所排放的粪便、生活污水特点，<br/>开发出适合中国农村实情的新型农村污水处理设备。
+                <p>与中科院微生物合作，针对中国农村生活所排放的粪便、生活污水特点，<br />开发出适合中国农村实情的新型农村污水处理设备。
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>一体化</h5>
+        <div class="row row_list">
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-6">
+            <h5><a>一体化</a></h5>
             <ul>
               <li>一机多用，一步到位。</li>
               <li>厕所、厨房、洗浴一体化处理。</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h5>无害化</h5>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5><a>无害化</a></h5>
             <ul>
               <li>排放符合《城镇污水处理厂污染物综合排放标准》，出水达到一级 B 标准，彻底解决农村主要污染源。</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h5>智能化</h5>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5><a>智能化</a></h5>
             <ul>
               <li>户厕设备由智能物联网 IoT 设备控制驱动，实现故障报警、动态远程控制等功能，与智能管护 App 打通实现高效运维。</li>
             </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>中水与肥效回用</h5>
+        <div class="row row_list">
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5><a>中水与肥效回用</a></h5>
             <ul>
               <li>设备人性化设计，支持中水回田灌溉、冲厕等。</li>
               <li>支持安全、便捷地肥效回用</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h5>性价比高</h5>
+          <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+            <h5><a>性价比高</a></h5>
             <ul>
               <li>无需建设管网，投资少，设备设计寿命 30 年，收益高。</li>
             </ul>
           </div>
-          <div class="col-md-4">
-            <h5>维护简单</h5>
+          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+            <h5><a>维护简单</a></h5>
             <ul>
               <li>自动化故障报警， 平时无需专业人员维修。</li>
             </ul>
@@ -183,7 +176,7 @@ export default {
   name: 'unify',
   data () {
     return {
-      items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'profile' }, { name: '生活污水生物集成处理设备', href: 'message' }, { name: '餐厨垃圾处理设备', href: 'setting' }],
+      items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'washroom' }],
       click: 0,
       list_group_items: ['STJ-单户式', 'STJ-多户式', 'STJ-村集中式'],
       click_group: 0,
@@ -235,12 +228,9 @@ export default {
 }
 .col-lg- {
   width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.row_col1 {
-  margin-top: 2%;
+  background: url("../../images/unify.png") no-repeat;
+  background-size: cover;
+  padding: 90px 0 150px 28px;
 }
 
 .row_col2 {
@@ -254,12 +244,26 @@ export default {
 .col-lg-13 p {
   color: #303030;
 }
-.nav-tabs-hover.active {
-  color: #1aa8aa;
-  border-bottom: 1px solid #1aa8aa;
+
+.nav-tabs-hover {
+  padding: 10px 15px;
+  text-align: center;
 }
+
 .nav-tabs-hover a {
   color: #303030 !important;
+  display: inline;
+  // border-bottom: 1px solid #fff;
+}
+.nav-tabs-hover.active {
+  color: #1aa8aa;
+}
+.nav-tabs-hover.active a {
+  color: #1aa8aa !important;
+  border-bottom: 1px solid #1aa8aa !important;
+}
+.nav-tabs > li > a {
+  border: none;
 }
 .nav-tabs.nav-justified > li > a {
   border-bottom: none;
@@ -283,11 +287,9 @@ export default {
 }
 .responsive-div {
   width: 100%;
-  background: #ebf4f4;
-  .img-responsive {
-    float: right;
-    display: inline-block;
-  }
+  background: url("../../images/wc.png") #ebf4f4 no-repeat;
+  background-size: contain;
+  background-position: 90% center;
 }
 .responsive-div2 {
   width: 100%;
@@ -296,6 +298,35 @@ export default {
     float: right;
     display: inline-block;
   }
+  .row_list {
+    padding: 0 0 40px 70px;
+    line-height: 23px;
+    h5 {
+      font-size: 14px;
+      margin-top: 55px;
+      line-height: 40px;
+      width: 80%;
+      border-bottom: 1px solid #e1e1e1;
+      a {
+        display: inline-block;
+        height: 100%;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+    &:first-of-type {
+      h5 {
+        margin-top: 0;
+      }
+    }
+    li {
+      font-size: 7px;
+    }
+    div {
+      // margin: 0 90px 60px 0;
+    }
+  }
+  .row .col-md-3,
   .row .col-md-4 {
     h5,
     ul > li {
@@ -306,9 +337,6 @@ export default {
       list-style: inside;
     }
   }
-}
-.row-lg-1 {
-  position: absolute;
 }
 .row-lg-2 {
   .bes_1 h4,
@@ -326,13 +354,16 @@ export default {
 .bes_1 h4 {
   font-size: 16px;
   color: #303030;
+  padding: 60px 0 16px 70px;
 }
 .bes_2 p {
   font-size: 9px;
   color: #303030;
+  padding: 0 0 44px 70px;
 }
 .text-muted {
   font-size: 9px;
+  padding: 0 0 85px 70px;
 }
 .responsive-div3 {
   width: 100%;
@@ -420,5 +451,8 @@ export default {
     color: #747c77;
     text-align: center;
   }
+}
+.row {
+  margin-right: 0;
 }
 </style>

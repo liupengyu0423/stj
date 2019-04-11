@@ -1,12 +1,12 @@
 <template>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default"
+       role="navigation">
     <div class="container-fluid">
-      <div class="navbar-header">
+      <div class="navbar-header nav-title">
         <button type="button"
-                class="navbar-toggle collapsed"
+                class="navbar-toggle"
                 data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
+                data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -17,32 +17,35 @@
                alt="Brand"></a>
       </div>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li v-for="(item,index) in tab"
-          :key="index"
-          v-if="item.tab_C!=='产品中心'">
-        <router-link :to="'/'+item.tab_E"
-                     class="dropdown-toggle">{{item.tab_C}}</router-link>
-        <div class="line"></div>
-      </li>
-      <li v-else
-          class="dropdown">
-        <a href="#"
-           class="dropdown-toggle"
-           data-toggle="dropdown"
-           role="button"
-           aria-haspopup="true"
-           aria-expanded="false">产品中心
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li v-for="(detail,index) in item_tab"
-              :key="index">
-            <router-link :to="'/'+detail.tab_E">{{detail.tab_C}}</router-link>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse navbar-right is-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li v-for="(item,index) in tab"
+            :key="index"
+            v-if="item.tab_C!=='产品中心'">
+          <router-link :to="'/'+item.tab_E"
+                       class="dropdown-toggle router-link-one">{{item.tab_C}}</router-link>
+          <div class="line"></div>
+        </li>
+        <li v-else
+            class="dropdown">
+          <a href="#"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false">产品中心
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li v-for="(detail,index) in item_tab"
+                :key="index">
+              <router-link :to="'/'+detail.tab_E">{{detail.tab_C}}</router-link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
   </nav>
 </template>
 
@@ -96,18 +99,12 @@ export default {
   background: #fff;
   color: #1aa8aa;
 }
-.router-link-exact-active {
+.router-link-one.router-link-exact-active {
   border-bottom: 2px solid #40f2d0;
 }
 .nav > li > a {
   padding: 10px 0;
   margin: 0 15px;
-}
-@media (min-width: 768px) {
-  .navbar-nav > li > a {
-    /* padding-top: 15px; */
-    /* padding-bottom: 15px; */
-  }
 }
 .navbar {
   margin-bottom: 0px;
@@ -118,7 +115,17 @@ export default {
 }
 @media (min-width: 768px) {
   .navbar-right {
-    padding-right: 239px;
+    padding-right: 39px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-right {
+    margin-right: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-right {
+    padding-right: 100px;
   }
 }
 .dropdown-menu > li > a {
