@@ -218,7 +218,7 @@ export default {
 .bottom_intro {
   h4 {
     font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: PingFangSC-Thin;
     color: #424644;
   }
@@ -335,27 +335,27 @@ export default {
 .col-sm-13 {
   h2 {
     font-size: 19px;
-    font-size: 1.9rem;
+    font-size: 1rem;
     color: #1aa8aa;
     padding-top: 6vw;
     margin-bottom: 3.55vw;
   }
   .top {
     font-size: 11px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: #3e403f;
     margin-bottom: 0.4vw;
   }
   .center {
     font-size: 8px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #3e403f;
   }
   .all {
     float: left;
     color: #1aa8aa;
     font-size: 8px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     margin-top: 1.9vw;
   }
   img {
@@ -370,7 +370,7 @@ export default {
     text-align: center;
     padding: 12vw 0 10vw 0;
     font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
   > div {
     float: left;
