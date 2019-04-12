@@ -5,7 +5,7 @@
       <ul class="quickly_li">
         <li v-for="(item,index) in quickly"
             :key="index">
-          <a href="#">{{item}}</a>
+          <a :href="item.tab_E">{{item.tab_C}}</a>
         </li>
       </ul>
     </div>
@@ -39,7 +39,13 @@ export default {
   name: 'CommonFoot',
   data () {
     return {
-      quickly: ['首页', '产品中心', '互联网+', '应用案例', '领导关怀', '新闻中心', '关于我们'],
+      quickly: [{ tab_C: '首页', tab_E: 'home' },
+      { tab_C: '产品中心', tab_E: 'unify' },
+      { tab_C: '互联网+', tab_E: 'net' },
+      { tab_C: '应用案例', tab_E: 'expression' },
+      { tab_C: '领导关怀', tab_E: 'leader' },
+      { tab_C: '新闻中心', tab_E: 'news' },
+      { tab_C: '关于我们', tab_E: 'about' }],
       call: ['T. 0634-6270330', 'F. 0634-6270292', 'E. stj@chinastj.com']
     }
   }
@@ -48,12 +54,17 @@ export default {
 
 <style lang="scss" scoped>
 footer {
+  position: relative;
   width: 100%;
   max-height: 500px;
   background: #2a2f2f;
   padding: 2.3em 3.5em 1.8vw 2.3em;
   // position: fixed;
   // bottom: 0;
+  .img-responsive {
+    position: absolute;
+    right: 1vw !important;
+  }
   > div {
     display: inline-block;
     vertical-align: top;
@@ -61,21 +72,19 @@ footer {
   .quickly_title,
   .call_title {
     color: #b1b1b1;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 8px;
+    font-size: 0.8rem;
     margin-bottom: 2.8vw;
-  }
-  .call_li {
-    font-size: 13px;
-    font-size: 1.3rem;
   }
   .quickly_li,
   .call_li {
-    line-height: 3vw;
+    li {
+      line-height: 4vw;
+    }
     a {
       color: #747c77 !important;
-      font-size: 14px;
-      font-size: 1.4rem;
+      font-size: 7px;
+      font-size: 0.7rem;
     }
   }
   .call {
@@ -84,8 +93,8 @@ footer {
   .hot_line_top,
   .hot_line_bot {
     color: #747c77;
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 7px;
+    font-size: 0.7rem;
   }
   .hot_line {
     margin-top: 2em;
@@ -94,8 +103,11 @@ footer {
     float: right;
   }
   .bottom {
-    // display: block;
-    padding-top: 4vw;
+    display: block;
+    // padding-top: 4vw;
+    // position: absolute;
+    // bottom: 0;
+    // left: 2.3em;
     .left {
       padding-right: 2vw;
     }

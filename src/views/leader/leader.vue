@@ -42,16 +42,6 @@
              @click="tab('one')">1</a>
         </li>
         <li>
-          <a :class="num==='two'?'active':''"
-             href="#mao"
-             @click="tab('two')">2</a>
-        </li>
-        <li>
-          <a :class="num==='three'?'active':''"
-             href="#mao"
-             @click="tab('three')">3</a>
-        </li>
-        <li>
           <a aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
@@ -86,38 +76,16 @@ export default {
       num: 'one',
       examples: [],
       examples1: [
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 1, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 2, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 3, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 4, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 5, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 6, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 7, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 8, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' }
-      ],
-      examples2: [
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 1, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 2, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 3, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 4, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 5, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 6, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 7, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 8, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-      ],
-      examples3: [
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 2, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 3, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 4, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 5, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 6, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 7, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 8, date: '2019-03-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区金山镇…' },
-        { title: '生态洁公司荣获《山东名牌产品》称号', img: require('../../images/news.png'), id: 1, date: '2019-03-08', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化生…' },
-      ],
+        { title: '国家副主席王岐山关注公司产品', img: require('../../images/l1/l1.jpg'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江…' },
+        { title: '全国人大常委会原副委员长、中华全', img: require('../../images/l1/l2.jpg'), id: 1, date: '2019-02-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
+        { title: '全国人大常委会原副委员长路甬祥参观公', img: require('../../images/l1/l3.jpg'), id: 2, date: '2019-01-01', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
+        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/l1/l4.jpg'), id: 3, date: '2018-10-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区…' },
+        { title: '山东省省长龚正检查指导公司户厕改造工', img: require('../../images/l1/l5.jpg'), id: 4, date: '2018-07-03', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
+        { title: '原国家知识产权局长田力普来公司考察', img: require('../../images/l1/l6.jpg'), id: 5, date: '2018-02-19', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
+        { title: '河南省委常委、统战部部长孙守刚指导公', img: require('../../images/l1/l7.jpg'), id: 6, date: '2018-02-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装…' },
+        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l8.jpg'), id: 7, date: '2017-12-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
+        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l9.jpg'), id: 8, date: '2017-05-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' }
+      ]
     }
   },
   components: {
@@ -142,10 +110,6 @@ export default {
       this.num = num
       if (num === 'one') {
         this.examples = this.examples1
-      } else if (num === 'two') {
-        this.examples = this.examples2
-      } else {
-        this.examples = this.examples3
       }
     }
   }
@@ -161,8 +125,8 @@ export default {
   .pagination > li > a,
   .pagination > li > span {
     color: #000;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 9px;
+    font-size: 0.9rem;
   }
   .active {
     color: #1aa8aa !important;
@@ -194,6 +158,7 @@ export default {
     .thumbnail > img {
       margin: 0;
       width: 100%;
+      height: 24vw;
     }
     .caption {
       padding: 0;
@@ -240,10 +205,9 @@ export default {
     h4 {
       line-height: 5.4vw;
       color: #f8faf9;
-      font-size: 20px;
       font-family: PingFangSC-Regular;
-      font-size: 40px;
-      font-size: 4rem;
+      font-size: 20px;
+      font-size: 2rem;
     }
   }
 }

@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h4>专注产品研发近20年， <br/>在全国10多个省区累计使用超过100万套<br/> 全国80%的市场占有率
+          <h4>专注产品研发近20年， <br />在全国10多个省区累计使用超过100万套<br /> 全国80%的市场占有率
           </h4>
         </div>
       </div>
@@ -66,20 +66,20 @@ export default {
       items: [{ name: '农村户厕污水一体化生物处理设备', href: 'unify' }, { name: '生物环保厕所', href: 'wrashroom' }],
       click: 0,
       examples1: [
-        { text: '内蒙鄂托克旗', img: require('../../images/news.png') },
-        { text: '新疆喀什', img: require('../../images/news.png') },
-        { text: '广西上林县', img: require('../../images/news.png') },
-        { text: '陕西洛川县', img: require('../../images/news.png') },
-        { text: '青海门源县', img: require('../../images/news.png') },
-        { text: '宁夏利通区', img: require('../../images/news.png') },
-        { text: '宁夏灵武市', img: require('../../images/news.png') },
-        { text: '山东齐河县', img: require('../../images/news.png') },
-        { text: '山东荣成市', img: require('../../images/news.png') }
+        { text: '山东莱芜', img: require('../../images/w1/w1.jpg') },
+        { text: '金鼎置业', img: require('../../images/w1/w2.jpg') },
+        { text: '房干旅游区', img: require('../../images/w1/w3.jpg') },
+        { text: '郭家沟社区', img: require('../../images/w1/w4.jpg') },
+        { text: '宁夏利通', img: require('../../images/w1/w5.jpg') },
+        { text: '宁夏灵武', img: require('../../images/w1/w6.jpg') },
+        { text: '青海贵德', img: require('../../images/w1/w7.jpg') },
+        { text: '浙江嘉兴', img: require('../../images/w1/w8.png') },
+        { text: '山东嘉祥', img: require('../../images/w1/w9.jpg') }
       ],
       examples2: [
-        { text: '内蒙鄂托克旗', img: require('../../images/news.png') },
-        { text: '新疆喀什', img: require('../../images/news.png') },
-        { text: '广西上林县', img: require('../../images/news.png') },
+        { text: '微生物降解环保厕所', img: require('../../images/c1/c1.jpg') },
+        { text: '街头站立式环保厕所', img: require('../../images/c1/c2.jpg') },
+        { text: '泡沫封堵式环保厕所', img: require('../../images/c1/c3.jpg') },
       ]
     }
   },
@@ -108,11 +108,11 @@ export default {
     background: #40f2d0;
     position: absolute;
     bottom: 0;
-    left: 6vw;
+    left: 8vw;
   }
   .line2 {
     width: 50px;
-    left: 3vw;
+    left: 4.5vw;
   }
   .changeActiveA {
     position: relative;
@@ -129,9 +129,9 @@ export default {
       line-height: 30px;
       color: #1aa8aa;
       font-family: PingFangSC-Regular;
-      font-size: 32px;
-      font-size: 3.2rem;
-      line-height: 5vw;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 4vw;
     }
   }
   .row {
@@ -147,8 +147,8 @@ export default {
   .nav-tabs-hover a {
     color: #303030 !important;
     display: inline;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 8px;
+    font-size: 0.8rem;
   }
   .nav-tabs-hover.active a {
     color: #1aa8aa !important;
@@ -194,6 +194,11 @@ export default {
       border: none;
       padding: 0;
     }
+    img {
+      width: 100%;
+      height: 12vw;
+      margin: 0;
+    }
     .caption {
       position: absolute;
       bottom: 0;
@@ -204,8 +209,8 @@ export default {
       h5 {
         color: #fff;
         font-family: PingFangSC-Regular;
-        font-size: 10px;
-        font-size: 1rem;
+        font-size: 6px;
+        font-size: 0.6rem;
       }
     }
   }

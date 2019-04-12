@@ -165,7 +165,7 @@ export default {
       intro1: [{
         title: '公司简介',
         two_title: '生态洁环保科技股份有限公司是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业',
-        content: '是专业环保产品研发、设计、生产销售于一体的股份制高科技企业。\n公司以先进的技术，优良的品质，专业的服务为客户提供最优质的服务。\n主要从事环保装备制造、工程承包、环保项目投资、工程建设、运营服务。形成一体化处理设备、农村污水集<br/>成处理系统、生物环保卫生间等系列产品。',
+        content: '是专业环保产品研发、设计、生产销售于一体的股份制高科技企业。\n公司以先进的技术，优良的品质，专业的服务为客户提供最优质的服务。\n主要从事环保装备制造、工程承包、环保项目投资、工程建设、运营服务。形成一体化处理设备、农村污水集\n成处理系统、生物环保卫生间等系列产品。',
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
       }],
       intro2: [{
@@ -181,15 +181,15 @@ export default {
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
       }],
       examples: [
-        { text: '街头站立式', img: require('../../images/news.png') },
-        { text: '微生物降解环保厕所', img: require('../../images/news.png') },
-        { text: '泡沫封堵式环保厕所', img: require('../../images/news.png') },
-        { text: '街头站立式', img: require('../../images/news.png') },
-        { text: '微生物降解环保厕所', img: require('../../images/news.png') },
-        { text: '泡沫封堵式环保厕所', img: require('../../images/news.png') },
-        { text: '街头站立式', img: require('../../images/news.png') },
-        { text: '微生物降解环保厕所', img: require('../../images/news.png') },
-        { text: '泡沫封堵式环保厕所', img: require('../../images/news.png') }
+        { text: '高新技术企业', img: require('../../images/ry/r1.jpg') },
+        { text: '火炬计划重点高新技术企业', img: require('../../images/ry/r2.jpg') },
+        { text: '院士工作站', img: require('../../images/ry/r3.jpg') },
+        { text: '中国驰名商标', img: require('../../images/ry/r4.jpg') },
+        { text: '工人先锋号', img: require('../../images/ry/r5.jpg') },
+        { text: '优秀科技品牌', img: require('../../images/ry/r6.jpg') },
+        { text: '山东名牌', img: require('../../images/ry/r7.jpg') },
+        { text: '中国专利山东明星企业', img: require('../../images/ry/r8.jpg') },
+        { text: '山东最具发展潜力民营企业', img: require('../../images/ry/r9.jpg') }
       ]
     }
   },
@@ -234,8 +234,8 @@ export default {
       }
       .date {
         font-family: PingFangSC-Semibold;
-        font-size: 32px;
-        font-size: 3.2rem;
+        font-size: 16px;
+        font-size: 1.6rem;
         color: #1aa8aa;
         &:last-of-type {
           position: relative;
@@ -292,8 +292,8 @@ export default {
       }
       .text {
         font-family: PingFangSC-Light;
-        font-size: 16px;
-        font-size: 1.6rem;
+        font-size: 8px;
+        font-size: 0.8rem;
         color: #303030;
         letter-spacing: -0.04;
         text-align: justify;
@@ -303,11 +303,11 @@ export default {
       }
       .text p {
         font-family: PingFangSC-Light;
-        font-size: 16px;
-        font-size: 1.6rem;
+        font-size: 8px;
+        font-size: 0.8rem;
         color: #303030;
         &:nth-child(2) {
-          margin-top: 2.4vw;
+          margin-top: 2vw;
         }
       }
       // .text::before {
@@ -341,9 +341,9 @@ export default {
       }
     }
     h4 {
-      font-size: 32px;
-      font-size: 3.2rem;
-      line-height: 49px;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24.5px;
       line-height: 4.9vw;
       color: #fff;
       font-family: PingFangSC-Semibold;
@@ -351,8 +351,8 @@ export default {
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 20px;
-      font-size: 2rem;
+      font-size: 10px;
+      font-size: 1rem;
       margin-top: 2vw;
     }
   }
@@ -406,8 +406,8 @@ export default {
     background: #ebf4f4;
   }
   h6 {
-    font-size: 32px;
-    font-size: 3.2rem;
+    font-size: 16px;
+    font-size: 1.6rem;
     margin: 6vw 0 2.8vw 7vw;
     font-family: PingFangSC-Semibold;
     color: #303030;
@@ -415,8 +415,8 @@ export default {
   p.two_title,
   p.laster {
     color: #1aa8aa;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 9px;
+    font-size: 0.9rem;
     margin: 0 0 1.9vw 7vw;
     font-family: PingFangSC-Light;
   }
@@ -429,8 +429,8 @@ export default {
   }
   p.content {
     color: #303030;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 8px;
+    font-size: 0.8rem;
     font-family: PingFangSC-Light;
     margin: 0 0 1.45vw 7vw;
   }
@@ -444,14 +444,14 @@ export default {
   }
   .bottom_intro p {
     color: #303030;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 9px;
+    font-size: 0.9rem;
     line-height: 4vw;
   }
   .bottom_intro h4 {
     color: #303030;
-    font-size: 32px;
-    font-size: 3.2rem;
+    font-size: 16px;
+    font-size: 1.6rem;
     margin-bottom: 5.6vw !important;
     font-family: PingFangSC-Semibold;
   }
@@ -469,17 +469,22 @@ export default {
       border: none;
       padding: 0;
     }
+    img {
+      width: 100%;
+      height: 14vw;
+      margin: 0;
+    }
     .caption {
       position: absolute;
       bottom: 0;
       background: rgba(255, 255, 255, 0.88);
       width: 100%;
-      padding: 0.7vw 1.4vw;
+      padding: 0.7vw 1vw;
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
-        font-size: 18px;
-        font-size: 1.8rem;
+        font-size: 9px;
+        font-size: 0.9rem;
         text-align: left;
       }
     }

@@ -27,7 +27,7 @@
             <img src="../../images/integration.png"
                  alt="">
             <div class="caption">
-              <p class="list-group-item-p">厕所、洗浴、厨房一体化</p>
+              <p class="list-group-item-p">厕所洗浴厨房一体化</p>
             </div>
           </div>
         </div>
@@ -39,25 +39,24 @@
            alt=""
            class="img-responsive">
       <div class="intro_text">
-        <p class="intro_title">为农村厕所革命和生态文明建设做出贡献</p>
-        <p>生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
+        <p class="intro_title">为农村厕所革命和生态文明建设做出贡献生态洁是国内唯一一家取得</p>
+        <p>驰名商标的环保厕所和污水处理设备研发制造企业</p>
         <p>专注产品研发近20年，在全国10多个省区累计使用超过100万套</p>
         <ul class="instro-radius-ul">
           <li class="instro-radius">
             <h4>ISO</h4>
-            <p>体系认证</p>
-            <p>
-              <strong>3</strong>个</p>
+            <p>认证</p>
+            <!-- <p>
+              <strong>3</strong>个</p> -->
           </li>
           <li class="instro-radius">
             <h4>50+</h4>
             <p>专利</p>
           </li>
           <li class="instro-radius">
-            <p>核心技术</p>
-            <p>列入国家</p>
-            <p>
-              <strong>863</strong>计划</p>
+            <!-- <p>列入</p> -->
+            <h4>863</h4>
+            <p>计划</p>
           </li>
         </ul>
       </div>
@@ -99,7 +98,7 @@
     <div class="container-fluid map">
       <h4>新闻中心</h4>
       <div class="row examples">
-        <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6"
+        <div class="col-sm-6 col-md-6 col-xs-12 col-lg-6"
              v-for="(item,index) in examples"
              :key="index">
           <div class="thumbnail">
@@ -140,7 +139,7 @@
         <div class="row">
           <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>褒奖</h4>
-            <div class="col-sm-6 col-lg-4 col-md-4 col-xs-6"
+            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"
                  v-for="(item,index) in examples2"
                  :key="index">
               <div class="thumbnail">
@@ -168,18 +167,18 @@ export default {
   data () {
     return {
       examples: [
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 0, date: '2019-03-08', detail: '3月8日，四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 1, date: '2019-10-09', detail: '2018年10月9日，全国首届农村卫生厕所新技术新产品展示交流会在山东…' },
-        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/news.png'), id: 2, date: '2019-03-08', detail: '3月8日，四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/news.png'), id: 3, date: '2019-03-08', detail: '2018年10月9日，全国首届农村卫生厕所新技术新产品展示交流会在山东…' }
+        { title: '四川省农业厅副厅长杨波参观公司产品', img: require('../../images/n1/n1.jpg'), id: 0, date: '2019-03-08', detail: '3月8日，四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在…' },
+        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/n1/n2.jpg'), id: 1, date: '2019-10-09', detail: '2018年10月9日，全国首届农村卫生厕所新技术新产品展示交流会在山东…' },
+        { title: '住建部总工程师陈宜明参观公司产品', img: require('../../images/n1/n3.jpg'), id: 2, date: '2019-03-08', detail: '2018年10月13日，住建部总工程师陈宜明到第七…' },
+        { title: '山东省莱芜市莱城区领导观摩生态洁产品', img: require('../../images/n1/n4.jpg'), id: 3, date: '2019-03-08', detail: '2018年6月19日，莱芜市莱城区委书记马宝岭，区长秦蕾带领区五大班…' }
       ],
       examples2: [
-        { text: '高新技术企业', img: require('../../images/news.png') },
-        { text: '火炬计划重点高新技术企业', img: require('../../images/news.png') },
-        { text: '院士工作站', img: require('../../images/news.png') },
-        { text: '国家级科技进步奖', img: require('../../images/news.png') },
-        { text: '世界厕所大赛表扬奖', img: require('../../images/news.png') },
-        { text: '中国专利山东明星企业证书', img: require('../../images/news.png') },
+        { text: '低碳单位', img: require('../../images/ry/r10.jpg') },
+        { text: '科技进步', img: require('../../images/ry/r11.jpg') },
+        { text: '厕所大赛', img: require('../../images/ry/r12.jpg') },
+        { text: '消费满意', img: require('../../images/ry/r13.jpg') },
+        { text: '环保单位', img: require('../../images/ry/r14.jpg') },
+        { text: '创业基地', img: require('../../images/ry/r15.jpg') }
       ]
     }
   },
@@ -218,8 +217,8 @@ export default {
 }
 .bottom_intro {
   h4 {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 15px;
+    font-size: 1.5rem;
     font-family: PingFangSC-Thin;
     color: #424644;
   }
@@ -261,7 +260,7 @@ export default {
     }
     .intro_title {
       font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 0.8rem;
       margin-top: 4vw;
       margin-bottom: 2vw;
     }
@@ -275,7 +274,7 @@ export default {
     #ebf4f4 100%
   );
   .scheme_left {
-    background: url('../../images/product.png') no-repeat;
+    background: url("../../images/product.png") no-repeat;
     background-size: contain;
   }
 }
@@ -299,7 +298,7 @@ export default {
   color: #fff;
   position: absolute;
   top: 4.2vw;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   width: 100%;
   text-align: center;
 }
@@ -319,8 +318,8 @@ export default {
   margin-top: 1vw;
 }
 .instro-radius {
-  width: 11vw;
-  height: 11vw;
+  width: 9vw;
+  height: 9vw;
   border: 1px solid #fff;
   border-radius: 50%;
   display: flex;
@@ -329,34 +328,34 @@ export default {
   box-sizing: border-box;
   h4 {
     color: #fff;
-    font-size: 28px;
-    font-size: 2.8rem;
+    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 .col-sm-13 {
   h2 {
-    font-size: 38px;
-    font-size: 3.8rem;
+    font-size: 19px;
+    font-size: 1.9rem;
     color: #1aa8aa;
     padding-top: 6vw;
     margin-bottom: 3.55vw;
   }
   .top {
-    font-size: 22px;
-    font-size: 2.2rem;
+    font-size: 11px;
+    font-size: 1.1rem;
     color: #3e403f;
     margin-bottom: 0.4vw;
   }
   .center {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 8px;
+    font-size: 0.8rem;
     color: #3e403f;
   }
   .all {
     float: left;
     color: #1aa8aa;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 8px;
+    font-size: 0.8rem;
     margin-top: 1.9vw;
   }
   img {
@@ -370,8 +369,8 @@ export default {
     font-family: PingFangSC-Thin;
     text-align: center;
     padding: 12vw 0 10vw 0;
-    font-size: 32px;
-    font-size: 3.2rem;
+    font-size: 16px;
+    font-size: 1.6rem;
   }
   > div {
     float: left;
@@ -386,8 +385,8 @@ export default {
   }
   .spure_text {
     color: #303030;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 9px;
+    font-size: 0.9rem;
     margin-left: 6px;
   }
   .thumbnail {
@@ -395,24 +394,24 @@ export default {
     border-bottom: 1px solid #ebebeb;
     padding-bottom: 4vw !important;
     img {
-      width: 45%;
-      height: 19vw;
+      width: 50%;
+      height: 20%;
       margin-right: 2%;
       display: inline-block;
     }
     .learn_detail {
-      font-size: 12px;
-      font-size: 1.2rem;
+      font-size: 6px;
+      font-size: 0.6rem;
       color: #7a7e7c;
     }
     .detail {
-      font-size: 14px;
-      font-size: 1.4rem;
+      font-size: 7px;
+      font-size: 0.7rem;
       color: #303030;
     }
     .title {
-      font-size: 14px;
-      font-size: 1.4rem;
+      font-size: 7px;
+      font-size: 0.7rem;
       color: #303030;
       margin-top: 0.5vw;
     }
@@ -437,8 +436,8 @@ export default {
 }
 .more_news {
   border: 1px solid #ebebeb;
-  font-size: 8px;
-  font-size: 0.8rem;
+  font-size: 4px;
+  font-size: 0.4rem;
   color: #747c77;
   padding: 0.5vw 0.9vw;
   margin-top: 1.95vw;
@@ -454,6 +453,11 @@ export default {
     position: relative;
     border: none;
   }
+  img {
+    width: 19vw;
+    height: 12vw;
+    margin: 0;
+  }
   .caption {
     position: absolute;
     bottom: 0px;
@@ -463,8 +467,8 @@ export default {
     h5 {
       color: #303030;
       font-family: PingFangSC-Regular;
-      font-size: 12px;
-      font-size: 1.2rem;
+      font-size: 6px;
+      font-size: 0.6rem;
     }
   }
   .more {

@@ -307,9 +307,14 @@ export default {
       list_group_items: ['STJ-单户式', 'STJ-多户式', 'STJ-村集中式'],
       click_group: 0,
       examples: [
-        { text: '内蒙鄂托克旗', img: require('../../images/news.png') },
-        { text: '内蒙鄂托克旗', img: require('../../images/news.png') },
-        { text: '内蒙鄂托克旗', img: require('../../images/news.png') }
+        { text: '北京八达岭长城', img: require('../../images/y1/y1.jpg') },
+        { text: '奥林匹克水上公园', img: require('../../images/y1/y2.jpg') },
+        { text: '上海奉贤', img: require('../../images/y1/y3.jpg') }
+      ],
+      examples2: [
+        { text: '微生物降解环保厕所', img: require('../../images/c1/c1.jpg') },
+        { text: '街头站立式环保厕所', img: require('../../images/c1/c2.jpg') },
+        { text: '泡沫封堵式环保厕所', img: require('../../images/c1/c3.jpg') }
       ]
     }
   },
@@ -365,7 +370,7 @@ export default {
 }
 .xi-col-lg-.col-lg- {
   width: 100%;
-  background: url('../../images/unify.png') no-repeat;
+  background: url("../../images/unify.png") no-repeat;
   background-size: cover;
   padding: 90px 0 150px 28px;
 }
@@ -432,7 +437,7 @@ export default {
 }
 .responsive-div {
   width: 100%;
-  background: url('../../images/wc.png') #ebf4f4 no-repeat;
+  background: url("../../images/wc.png") #ebf4f4 no-repeat;
   background-size: contain;
   background-position: 90% center;
 }
@@ -562,23 +567,23 @@ export default {
   }
 }
 .responsive-div3_single {
-  background: url('../../images/single.png') no-repeat;
+  background: url("../../images/single.png") no-repeat;
   background-size: contain;
   background-position: 70% center;
 }
 .responsive-div3_much {
-  background: url('../../images/much.png') no-repeat;
+  background: url("../../images/much.png") no-repeat;
   background-size: contain;
   background-position: 70% center;
 }
 .responsive-div3_center {
-  background: url('../../images/center.png') no-repeat;
+  background: url("../../images/center.png") no-repeat;
   background-size: contain;
   background-position: 70% center;
 }
 .responsive-div4 {
   width: 100%;
-  background: url('../../images/theory.png') no-repeat #e8f6f4;
+  background: url("../../images/theory.png") no-repeat #e8f6f4;
   background-size: contain;
   background-position: 80% center;
   .col-lg- {
@@ -628,6 +633,11 @@ export default {
     position: relative;
     border: none;
     padding: 0;
+  }
+  img {
+    width: 100%;
+    height: 12vw;
+    margin: 0;
   }
   .caption {
     position: absolute;
