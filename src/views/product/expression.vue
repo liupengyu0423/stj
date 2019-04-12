@@ -3,7 +3,7 @@
     <CommonHead />
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-8 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <h4>专注产品研发近20年， <br/>在全国10多个省区累计使用超过100万套<br/> 全国80%的市场占有率
           </h4>
         </div>
@@ -22,14 +22,29 @@
       </li>
     </ul>
     <div class="row examples">
-      <div class="col-sm-4 col-md-4 col-xs-6 col-lg-4"
+      <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
            v-for="(item,index) in click===0?examples1:examples2"
            :key="index">
         <div class="thumbnail">
-          <img :src="item.img">
+          <img @click="showimage(item.img)"
+               :src="item.img">
           <div class="caption">
             <h5>{{item.text}}</h5>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="ShowImage_Form"
+         class="modal">
+      <div class="modal-header">
+        <button data-dismiss="modal"
+                class="close"
+                type="button"></button>
+      </div>
+      <div class="modal-body"
+           @click="close">
+        <div id="img_show"
+             @click="close">
         </div>
       </div>
     </div>
@@ -71,6 +86,13 @@ export default {
   methods: {
     changeActive (index) {
       this.click = index
+    },
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
     }
   }
 }
@@ -86,10 +108,11 @@ export default {
     background: #40f2d0;
     position: absolute;
     bottom: 0;
-    left: 30%;
+    left: 6vw;
   }
   .line2 {
     width: 50px;
+    left: 3vw;
   }
   .changeActiveA {
     position: relative;
@@ -106,14 +129,16 @@ export default {
       line-height: 30px;
       color: #1aa8aa;
       font-family: PingFangSC-Regular;
-      font-size: 20px;
+      font-size: 32px;
+      font-size: 3.2rem;
+      line-height: 5vw;
     }
   }
   .row {
     margin-right: 0;
   }
   .nav-tabs-hover {
-    padding: 10px 15px;
+    padding: 1.5vw;
     text-align: center;
   }
   .nav-tabs-hover.active {
@@ -122,6 +147,8 @@ export default {
   .nav-tabs-hover a {
     color: #303030 !important;
     display: inline;
+    font-size: 16px;
+    font-size: 1.6rem;
   }
   .nav-tabs-hover.active a {
     color: #1aa8aa !important;
@@ -131,6 +158,7 @@ export default {
   }
   .nav-tabs.nav-justified > li > a {
     border-bottom: none;
+    padding: 1.5vw;
   }
   .nav-tabs.nav-justified {
     // border-bottom: 1px solid #f3f3f3;
@@ -155,11 +183,11 @@ export default {
     border-color: #fff;
   }
   .row.examples {
-    margin: 2% 10%;
-    padding-top: 26px;
+    margin: 2vw 10vw;
+    padding-top: 2.6vw;
     h4 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 2vw;
     }
     .thumbnail {
       position: relative;
@@ -172,11 +200,12 @@ export default {
       background: #1aa8aa;
       width: 100%;
       opacity: 0.8;
-      padding: 3%;
+      padding: 0.5vw;
       h5 {
         color: #fff;
         font-family: PingFangSC-Regular;
         font-size: 10px;
+        font-size: 1rem;
       }
     }
   }

@@ -3,8 +3,11 @@
     <CommonHead />
     <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
+        <img src="../../images/net1.png"
+             alt=""
+             class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="row1 col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <h4>互联网+ 智能厕所
             </h4>
             <p>借助云计算、IoT 物联网、大数据、智能运维 App、用户端智能家居 App 等前沿科技产品，让每一台生态洁环保厕所都插上科技的翅膀，数据双向互联互通，故障自动报警，售后工单自动派发，真正实现高效率、低成本的管护运维。</p>
@@ -12,8 +15,11 @@
         </div>
       </div>
       <div class="col-lg- xi-col-lg-2">
+        <img src="../../images/net2.png"
+             alt=""
+             class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h4>IoT 终端设备
             </h4>
             <p class="top">每一台生态洁厕所，都是一台智能设备。</p>
@@ -22,6 +28,9 @@
         </div>
       </div>
       <div class="col-lg- xi-col-lg-3">
+        <img src="../../images/net3.png"
+             alt=""
+             class="img-responsive">
         <div class="row row_col1">
           <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h4>运维 APP
@@ -32,8 +41,11 @@
         </div>
       </div>
       <div class="col-lg- xi-col-lg-4">
+        <img src="../../images/net4.png"
+             alt=""
+             class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="row1 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>智能家居 APP
             </h4>
             <p class="top">每一台生态洁厕所，都是用户的智能家居。</p>
@@ -79,103 +91,139 @@ export default {
     margin-right: 0;
   }
   .xi-col-lg-.col-lg- {
-    background: url("../../images/net1.png") no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding: 168px 0 156px 70px;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .row {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-left: 10vw;
+      padding-top: 3.5vw;
+    }
     h4 {
-      font-family: PingFangSC-Semibold;
+      padding-top: 3vw;
       font-size: 32px;
-      color: #ffffff;
-      letter-spacing: 0;
+      font-size: 3.2rem;
       line-height: 49px;
+      line-height: 4.9vw;
+      color: #fff;
+      font-family: PingFangSC-Semibold;
     }
     p {
-      font-family: PingFangSC-Light;
-      font-size: 16px;
-      color: #ffffff;
-      letter-spacing: 0;
-      line-height: 32px;
+      color: #fff;
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      font-size: 2rem;
+      margin-top: 2vw;
+      line-height: 3.2vw;
     }
   }
   .xi-col-lg-2 {
-    background: url("../../images/net2.png") no-repeat;
-    background-size: cover;
-    padding: 214px 0 242px 70px;
+    position: relative;
     text-align: right;
-    width: 100%;
+    img {
+      width: 100%;
+    }
+    .row {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-left: 10vw;
+      padding-top: 3.5vw;
+    }
     .row_col1 {
       padding-left: 20%;
     }
     h4 {
-      font-family: PingFangSC-Semibold;
+      padding-top: 6vw;
       font-size: 32px;
-      color: #ffffff;
-      letter-spacing: 0;
+      font-size: 3.2rem;
       line-height: 49px;
+      line-height: 4.9vw;
+      color: #fff;
+      font-family: PingFangSC-Semibold;
     }
     p {
-      font-family: PingFangSC-Light;
-      font-size: 16px;
-      color: #ffffff;
-      letter-spacing: 0;
-      line-height: 32px;
+      color: #fff;
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      font-size: 2rem;
+      margin-top: 2vw;
+      line-height: 3.2vw;
     }
     .top {
-      margin-top: 31px;
-      margin-bottom: 60px;
+      margin-top: 3.2vw;
+      margin-bottom: 6vw;
     }
   }
   .xi-col-lg-3 {
-    background: url("../../images/net3.png") no-repeat;
-    background-size: cover;
-    padding: 214px 0 242px 70px;
-    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .row {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-left: 10vw;
+      padding-top: 3.5vw;
+    }
     h4 {
-      font-family: PingFangSC-Semibold;
+      padding-top: 10vw;
       font-size: 32px;
-      color: #ffffff;
-      letter-spacing: 0;
+      font-size: 3.2rem;
       line-height: 49px;
+      line-height: 4.9vw;
+      color: #fff;
+      font-family: PingFangSC-Semibold;
     }
     p {
-      font-family: PingFangSC-Light;
-      font-size: 16px;
-      color: #ffffff;
-      letter-spacing: 0;
-      line-height: 32px;
-    }
-    .top {
-      margin-top: 31px;
-      margin-bottom: 60px;
+      color: #fff;
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      font-size: 2rem;
+      margin-top: 2vw;
+      line-height: 3.2vw;
     }
   }
   .xi-col-lg-4 {
-    background: url("../../images/net4.png") no-repeat;
-    background-size: cover;
-    padding: 214px 0 242px 70px;
+    position: relative;
     text-align: right;
-    width: 100%;
-    .row_col1 {
-      padding-left: 18%;
+    img {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    .row {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-left: 10vw;
+      padding-top: 3.5vw;
     }
     h4 {
-      font-family: PingFangSC-Semibold;
+      padding-top: 10vw;
       font-size: 32px;
-      color: #303030;
-      letter-spacing: 0;
+      font-size: 3.2rem;
       line-height: 49px;
+      line-height: 4.9vw;
+      color: #303030;
+      font-family: PingFangSC-Semibold;
     }
     p {
-      font-family: PingFangSC-Light;
-      font-size: 16px;
       color: #303030;
-      letter-spacing: 0;
-      line-height: 32px;
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      font-size: 2rem;
+      margin-top: 2vw;
+      line-height: 3.2vw;
     }
     .top {
-      margin-top: 31px;
-      margin-bottom: 60px;
+      margin-top: 3.2vw;
+      margin-bottom: 6vw;
     }
   }
   .navbar {

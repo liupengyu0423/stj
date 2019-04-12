@@ -1,5 +1,25 @@
 @charset "UTF-8";
-
+@media only screen and (min-width: 320px){
+html {
+       font-size: 62.5% !important;
+     }
+   }
+   @media only screen and (min-width: 640px){
+     html {
+       font-size: 125% !important;
+     }
+  }
+  @media only screen and (min-width: 750px){
+    html {
+      font-size: 150% !important;
+    }
+  }
+  @media only screen and (min-width: 1242px){
+    html {
+      font-size: 187.5% !important;
+    }
+}
+html, body {height: 100%;}
 #loadingToast .weui-mask_transparent {
   z-index: 8210;
 }
@@ -84,10 +104,17 @@ H1, h2, h3, h4 {
 input {
   border: none;
 }
-
-img {
-  pointer-events: none;
+.carousel-inner {
+  width: 60%;
+  margin: 80px auto;
 }
+.modal-header {
+  border-bottom: none
+}
+
+/* img {
+  pointer-events: none;
+} */
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;

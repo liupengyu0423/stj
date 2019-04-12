@@ -3,8 +3,11 @@
     <CommonHead />
     <div class="container-fluid">
       <div class="col-lg- xi-col-lg-">
+        <img src="../../images/about.png"
+             alt=""
+             class="img-responsive">
         <div class="row row_col1">
-          <div class="col-lg-0 col-lg-4 col-md-4 col-sm-8 col-xs-12">
+          <div class="col-lg-0 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>致力于把环保节水理念和绿色环保产业<br />扩展到更加广阔的领域。
             </h4>
             <p>为农村厕所革命和生态文明建设做出应有的贡献！</p>
@@ -17,14 +20,16 @@
           :class="index===click?'active nav-tabs-hover':'nav-tabs-hover'"
           v-for="(item,index) in items"
           :key="index">
-        <a @click="changeActive(index)">{{item.name}}</a>
+        <a @click="changeActive(index)"
+           :href="'#'+item.href">{{item.name}}</a>
       </li>
     </ul>
-    <div class="container container_intro">
+    <div class="container container_intro"
+         id="unify">
       <div class="row"
            v-for="(item,index) in click===0?intro1:click===1?intro2:intro3"
            :key="index">
-        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
           <h6>{{item.title}}</h6>
           <p class="two_title">{{item.two_title}}</p>
           <p class="content">{{item.content}}</p>
@@ -32,7 +37,8 @@
         </div>
       </div>
     </div>
-    <div class="responsive-div6">
+    <div class="responsive-div6"
+         id="profile">
       <h4>发展历程</h4>
       <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
@@ -96,7 +102,8 @@
         </div>
       </div>
     </div>
-    <div class="container container_intro2">
+    <div class="container container_intro2"
+         id="message">
       <div class="row">
         <div class="bottom_intro col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <p>生态洁产品广泛运用到包括</p>
@@ -112,17 +119,32 @@
             <h4>荣誉奖项</h4>
             <p>通过了ISO9001质量管理体系、ISO14001环境管理体系和ISO18001职业健康管理体系三个国际标准化管理体系认证。 党、国家和省市部委领导王歧山、李建国、韩长赋、龚正、姜大明、田力普等领导都参观过公司产品，并做出高度评价。
             </p>
-            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-6"
+            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"
                  v-for="(item,index) in examples"
                  :key="index">
               <div class="thumbnail">
-                <img :src="item.img">
+                <img :src="item.img"
+                     @click="showimage(item.img)">
                 <div class="caption">
                   <h5>{{item.text}}</h5>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="ShowImage_Form"
+         class="modal">
+      <div class="modal-header">
+        <button data-dismiss="modal"
+                class="close"
+                type="button"></button>
+      </div>
+      <div class="modal-body"
+           @click="close">
+        <div id="img_show"
+             @click="close">
         </div>
       </div>
     </div>
@@ -147,13 +169,13 @@ export default {
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
       }],
       intro2: [{
-        title: '发展历程',
+        title: '公司简介',
         two_title: '生态洁环保科技股份有限公司是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业',
         content: '是专业环保产品研发、设计、生产销售于一体的股份制高科技企业。\n公司以先进的技术，优良的品质，专业的服务为客户提供最优质的服务。\n主要从事环保装备制造、工程承包、环保项目投资、工程建设、运营服务。形成一体化处理设备、农村污水集<br/>成处理系统、生物环保卫生间等系列产品。',
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
       }],
       intro3: [{
-        title: '荣誉奖项',
+        title: '公司简介',
         two_title: '生态洁环保科技股份有限公司是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业',
         content: '是专业环保产品研发、设计、生产销售于一体的股份制高科技企业。\n公司以先进的技术，优良的品质，专业的服务为客户提供最优质的服务。\n主要从事环保装备制造、工程承包、环保项目投资、工程建设、运营服务。形成一体化处理设备、农村污水集<br/>成处理系统、生物环保卫生间等系列产品。',
         laster: '公司建有院士工作站、省级工程技术研究中心，生态洁与国内最大的综合性微生物学研究机构——\n中国科学院微生物研究所合作，从事微生物学基础和应用研究。'
@@ -177,6 +199,13 @@ export default {
   methods: {
     changeActive (index) {
       this.click = index
+    },
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
     }
   },
   components: {
@@ -189,31 +218,33 @@ export default {
 <style lang="scss" scoped>
 .about {
   .responsive-div6 {
-    padding: 60px 10% 50px !important;
+    padding: 6vw 12vw 5vw !important;
     box-sizing: border-box;
     background: #fff;
     h4 {
       text-align: center;
-      margin-bottom: 44px;
+      margin-bottom: 2.2vw;
       font-family: PingFangSC-Semibold;
-      font-size: 16px;
+      font-size: 32px;
+      font-size: 3.2vw;
     }
     .develop {
       li {
-        padding: 17px 0 13.5px;
+        padding: 1.7vw 0 1.35vw;
       }
       .date {
         font-family: PingFangSC-Semibold;
-        font-size: 20px;
+        font-size: 32px;
+        font-size: 3.2rem;
         color: #1aa8aa;
         &:last-of-type {
           position: relative;
           img {
             position: absolute;
             top: 0;
-            left: -16px;
-            width: 50px;
-            height: 50px;
+            left: -1.6vw;
+            width: 5vw;
+            height: 5vw;
           }
         }
       }
@@ -224,9 +255,9 @@ export default {
             img {
               position: absolute;
               top: 0;
-              left: -12px;
-              width: 50px;
-              height: 50px;
+              left: -1.2vw;
+              width: 5vw;
+              height: 5vw;
             }
           }
         }
@@ -238,9 +269,9 @@ export default {
             img {
               position: absolute;
               top: 0;
-              left: -8px;
-              width: 50px;
-              height: 50px;
+              left: -0.8vw;
+              width: 5vw;
+              height: 5vw;
             }
           }
         }
@@ -252,9 +283,9 @@ export default {
             img {
               position: absolute;
               top: 0;
-              left: 5px;
-              width: 50px;
-              height: 50px;
+              left: 0.5;
+              width: 0.5vw;
+              height: 0.5vw;
             }
           }
         }
@@ -262,20 +293,21 @@ export default {
       .text {
         font-family: PingFangSC-Light;
         font-size: 16px;
+        font-size: 1.6rem;
         color: #303030;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.04;
         text-align: justify;
-        line-height: 30px;
-        padding-left: 10%;
-        margin-left: 2%;
+        line-height: 3vw;
+        padding-left: 5.9vw;
         border-left: 1px solid #1aa8aa;
       }
       .text p {
         font-family: PingFangSC-Light;
         font-size: 16px;
+        font-size: 1.6rem;
         color: #303030;
         &:nth-child(2) {
-          margin-top: 12px;
+          margin-top: 2.4vw;
         }
       }
       // .text::before {
@@ -297,23 +329,31 @@ export default {
     margin: 0;
     padding: 0;
     width: 100%;
-    position: relative;
+    // position: relative;
     .xi-col-lg-.col-lg- {
-      width: 100%;
-      background: url('../../images/about.png') no-repeat;
-      background-size: cover;
-      padding: 90px 0 150px 28px;
+      position: relative;
+      .row {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding-left: 10vw;
+        padding-top: 3.5vw;
+      }
     }
     h4 {
-      line-height: 30px;
+      font-size: 32px;
+      font-size: 3.2rem;
+      line-height: 49px;
+      line-height: 4.9vw;
       color: #fff;
       font-family: PingFangSC-Semibold;
     }
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 11px;
-      margin-top: 20px;
+      font-size: 20px;
+      font-size: 2rem;
+      margin-top: 2vw;
     }
   }
   .navbar {
@@ -325,6 +365,8 @@ export default {
   .nav-tabs-hover {
     padding: 10px 15px;
     text-align: center;
+    font-size: 16px;
+    font-size: 1.6vw;
   }
   .nav-tabs-hover a {
     color: #303030 !important;
@@ -364,51 +406,53 @@ export default {
     background: #ebf4f4;
   }
   h6 {
-    font-size: 24px;
-    margin-bottom: 28px;
-    margin-top: 60px;
-    margin: 60px 0 28px 70px;
+    font-size: 32px;
+    font-size: 3.2rem;
+    margin: 6vw 0 2.8vw 7vw;
     font-family: PingFangSC-Semibold;
     color: #303030;
   }
   p.two_title,
   p.laster {
     color: #1aa8aa;
-    font-size: 14px;
-    margin: 0 0 19px 70px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin: 0 0 1.9vw 7vw;
     font-family: PingFangSC-Light;
   }
   p.laster {
-    margin-bottom: 79.5px;
+    margin-bottom: 7.95vw;
     font-family: PingFangSC-Light;
   }
   p.two_title {
-    margin-bottom: 19px;
+    margin-bottom: 1.9vw;
   }
   p.content {
     color: #303030;
-    font-size: 13px;
-    margin-bottom: 14.5px;
+    font-size: 16px;
+    font-size: 1.6rem;
     font-family: PingFangSC-Light;
-    margin: 0 0 14.5px 70px;
+    margin: 0 0 1.45vw 7vw;
   }
   .container_intro2 {
     background: #ebf4f4;
     text-align: center;
   }
   .bottom_intro {
-    padding-top: 60px;
     line-height: 20px;
+    padding: 12vw 0 0;
   }
   .bottom_intro p {
     color: #303030;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 4vw;
   }
   .bottom_intro h4 {
     color: #303030;
-    font-size: 20px;
-    margin-bottom: 28px;
+    font-size: 32px;
+    font-size: 3.2rem;
+    margin-bottom: 5.6vw !important;
     font-family: PingFangSC-Semibold;
   }
   .bottom_intro2 p {
@@ -418,12 +462,8 @@ export default {
     color: #1aa8aa;
   }
   .responsive-div {
-    padding: 2% 10% !important;
+    padding: 0 7vw !important;
     box-sizing: border-box;
-    h4 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
     .thumbnail {
       position: relative;
       border: none;
@@ -434,11 +474,12 @@ export default {
       bottom: 0;
       background: rgba(255, 255, 255, 0.88);
       width: 100%;
-      padding: 3%;
+      padding: 0.7vw 1.4vw;
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
-        font-size: 12px;
+        font-size: 18px;
+        font-size: 1.8rem;
         text-align: left;
       }
     }

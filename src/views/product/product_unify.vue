@@ -116,10 +116,10 @@
           </div>
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
             <h5>
-              <a>性价比高</a>
+              <a>适用范围广</a>
             </h5>
             <ul>
-              <li>无需建设管网，投资少，设备设计寿命 30 年，收益高。</li>
+              <li>适用于平原、干旱、高原、高寒等地区。</li>
             </ul>
           </div>
           <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
@@ -244,11 +244,12 @@
            v-if="click===0">
         <h4>应用案例</h4>
         <div class="row">
-          <div class="col-sm-6 col-md-4"
+          <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
                v-for="(item,index) in examples"
                :key="index">
             <div class="thumbnail">
-              <img :src="item.img">
+              <img @click="showimage(item.img)"
+                   :src="item.img">
               <div class="caption">
                 <h5>{{item.text}}</h5>
               </div>
@@ -258,6 +259,20 @@
         <p class="more"
            @click="more">查看更多应用案例</p>
       </div>
+      <div id="ShowImage_Form"
+           class="modal">
+        <div class="modal-header">
+          <button data-dismiss="modal"
+                  class="close"
+                  type="button"></button>
+        </div>
+        <div class="modal-body"
+             @click="close">
+          <div id="img_show"
+               @click="close">
+          </div>
+        </div>
+      </div>
       <div class="responsive-div6"
            v-if="click===1">
         <h4>产品展示</h4>
@@ -266,7 +281,8 @@
                v-for="(item,index) in examples"
                :key="index">
             <div class="thumbnail">
-              <img :src="item.img">
+              <img @click="showimage(item.img)"
+                   :src="item.img">
               <div class="caption">
                 <h5>{{item.text}}</h5>
               </div>
@@ -306,6 +322,13 @@ export default {
     },
     more () {
       this.$router.push('/expression')
+    },
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
     }
   },
   components: {
@@ -338,7 +361,7 @@ export default {
   padding: 0;
   margin: 0;
   position: relative;
-  margin-bottom: 210px;
+  // margin-bottom: 210px;
 }
 .xi-col-lg-.col-lg- {
   width: 100%;

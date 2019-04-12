@@ -8,9 +8,24 @@
         <span>来源：生态洁</span>
       </p>
       <img :src="data.img"
+           @click="showimage(data.img)"
            alt=""
            class="img-responsive center-block">
       <p class="data_detail">{{data.detail}}</p>
+    </div>
+    <div id="ShowImage_Form"
+         class="modal">
+      <div class="modal-header">
+        <button data-dismiss="modal"
+                class="close"
+                type="button"></button>
+      </div>
+      <div class="modal-body"
+           @click="close">
+        <div id="img_show"
+             @click="close">
+        </div>
+      </div>
     </div>
     <CommonFoot />
   </div>
@@ -28,6 +43,15 @@ export default {
   },
   created () {
     this.data = JSON.parse(localStorage.getItem('news'))
+  },
+  methods: {
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
+    }
   },
   components: {
     CommonHead,

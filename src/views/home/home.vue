@@ -35,9 +35,9 @@
     </div>
     <div class="intro wrap"
          @click="blowimg">
-      <!-- <img src="../../images/intro.png"
+      <img src="../../images/intro.png"
            alt=""
-           class="img-responsive"> -->
+           class="img-responsive">
       <div class="intro_text">
         <p class="intro_title">为农村厕所革命和生态文明建设做出贡献</p>
         <p>生态洁是国内唯一一家取得驰名商标的环保厕所和污水处理设备研发制造企业</p>
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="row scheme">
-      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-12">
+      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
         <div class="thumbnail">
           <h2>产品中心</h2>
           <p class="top">农村户厕一体化生物处理建设</p>
@@ -74,7 +74,7 @@
                alt="">
         </div>
       </div>
-      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-12">
+      <div class="col-sm-13 col-sm-6 col-md-6 col-lg-6 col-xs-6">
         <div class="thumbnail">
           <h2>互联网+智慧方案</h2>
           <p class="top">农村户厕一体化生物处理设备</p>
@@ -99,12 +99,13 @@
     <div class="container-fluid map">
       <h4>新闻中心</h4>
       <div class="row examples">
-        <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6"
+        <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6"
              v-for="(item,index) in examples"
              :key="index">
           <div class="thumbnail">
             <img :src="item.img"
-                 class="center-block">
+                 class="center-block"
+                 @click="showimage(item.img)">
             <div class="caption">
               <p class="title">{{item.title}}</p>
               <p class="detail">{{item.detail}}</p>
@@ -115,19 +116,36 @@
           </div>
         </div>
       </div>
-      <a class="more_news"
-         href="/news">查看更多新闻</a>
+      <p class="more_news_p">
+        <a class="more_news"
+           href="/news">查看更多新闻</a>
+      </p>
+    </div>
+    <div id="ShowImage_Form"
+         class="modal">
+      <div class="modal-header">
+        <button data-dismiss="modal"
+                class="close"
+                type="button"></button>
+      </div>
+      <div class="modal-body"
+           @click="close">
+        <div id="img_show"
+             @click="close">
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="responsive-div">
         <div class="row">
           <div class="bottom_intro bottom_intro2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h4>褒奖</h4>
-            <div class="col-sm-4 col-lg-4 col-md-4 col-xs-12"
+            <div class="col-sm-6 col-lg-4 col-md-4 col-xs-6"
                  v-for="(item,index) in examples2"
                  :key="index">
               <div class="thumbnail">
-                <img :src="item.img">
+                <img @click="showimage(item.img)"
+                     :src="item.img">
                 <div class="caption">
                   <h5>{{item.text}}</h5>
                 </div>
@@ -179,6 +197,13 @@ export default {
     },
     learn_detail (news) {
       localStorage.setItem('news', JSON.stringify(news))
+    },
+    showimage (source) {
+      $("#ShowImage_Form").find("#img_show").html("<img src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+      $("#ShowImage_Form").modal();
+    },
+    close () {
+      $("#ShowImage_Form").modal('hide');
     }
   }
 }
@@ -189,6 +214,14 @@ export default {
   display: flex;
   img {
     width: 100%;
+  }
+}
+.bottom_intro {
+  h4 {
+    font-size: 30px;
+    font-size: 3rem;
+    font-family: PingFangSC-Thin;
+    color: #424644;
   }
 }
 .list-group-item {
@@ -211,26 +244,26 @@ export default {
   width: 100%;
   position: relative;
   pointer-events: auto;
-  background: url("../../images/intro.png") no-repeat;
-  background-size: cover;
   .intro_img {
     width: 100%;
   }
   .intro_text {
-    // position: absolute;
-    // top: 0;
+    position: absolute;
+    top: 0;
     text-align: center;
     width: 100%;
     padding-top: 1px;
     p {
       color: #fff;
-      line-height: 22px;
+      line-height: 3vw;
       font-size: 12px;
+      font-size: 1.2vw;
     }
     .intro_title {
       font-size: 16px;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      font-size: 1.6rem;
+      margin-top: 4vw;
+      margin-bottom: 2vw;
     }
   }
 }
@@ -242,7 +275,7 @@ export default {
     #ebf4f4 100%
   );
   .scheme_left {
-    background: url("../../images/product.png") no-repeat;
+    background: url('../../images/product.png') no-repeat;
     background-size: contain;
   }
 }
@@ -265,17 +298,10 @@ export default {
 .list-group-item-p {
   color: #fff;
   position: absolute;
-  top: 20%;
-  font-size: 8px;
+  top: 4.2vw;
+  font-size: 1.6rem;
   width: 100%;
   text-align: center;
-}
-@media (min-width: 768px) {
-  .list-group-item-p {
-    font-size: 16px;
-    position: absolute;
-    top: 35%;
-  }
 }
 .environment {
   .row {
@@ -290,12 +316,11 @@ export default {
 .instro-radius-ul {
   display: flex;
   justify-content: space-around;
-  margin-top: 43.5px;
-  padding-bottom: 75px;
+  margin-top: 1vw;
 }
 .instro-radius {
-  width: 86px;
-  height: 86px;
+  width: 11vw;
+  height: 11vw;
   border: 1px solid #fff;
   border-radius: 50%;
   display: flex;
@@ -304,36 +329,49 @@ export default {
   box-sizing: border-box;
   h4 {
     color: #fff;
+    font-size: 28px;
+    font-size: 2.8rem;
   }
 }
 .col-sm-13 {
   h2 {
-    font-size: 19px;
+    font-size: 38px;
+    font-size: 3.8rem;
     color: #1aa8aa;
-    padding-top: 60px;
-    margin-bottom: 35.5px;
+    padding-top: 6vw;
+    margin-bottom: 3.55vw;
   }
   .top {
-    font-size: 11px;
+    font-size: 22px;
+    font-size: 2.2rem;
     color: #3e403f;
-    margin-bottom: 4px;
+    margin-bottom: 0.4vw;
   }
   .center {
-    font-size: 8px;
+    font-size: 16px;
+    font-size: 1.6rem;
     color: #3e403f;
   }
   .all {
     float: left;
     color: #1aa8aa;
-    font-size: 8px;
-    margin-top: 19px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-top: 1.9vw;
+  }
+  img {
+    display: inline;
+    margin-top: -8vw;
   }
 }
 .map {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   h4 {
+    font-family: PingFangSC-Thin;
     text-align: center;
-    padding: 60px 0 50px 0;
+    padding: 12vw 0 10vw 0;
+    font-size: 32px;
+    font-size: 3.2rem;
   }
   > div {
     float: left;
@@ -341,35 +379,42 @@ export default {
   }
   .spure {
     display: inline-block;
-    width: 4px;
-    height: 4px;
+    width: 0.8vw;
+    height: 0.8vw;
     border-radius: 50%;
     background: #3dc4aa;
   }
   .spure_text {
     color: #303030;
-    font-size: 9px;
+    font-size: 18px;
+    font-size: 1.8rem;
     margin-left: 6px;
   }
   .thumbnail {
+    display: flex;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 4vw !important;
     img {
-      width: 50%;
-      height: 40%;
+      width: 45%;
+      height: 19vw;
       margin-right: 2%;
       display: inline-block;
     }
     .learn_detail {
       font-size: 12px;
+      font-size: 1.2rem;
       color: #7a7e7c;
     }
     .detail {
       font-size: 14px;
+      font-size: 1.4rem;
       color: #303030;
     }
     .title {
-      font-size: 18px;
+      font-size: 14px;
+      font-size: 1.4rem;
       color: #303030;
-      margin-top: 5px;
+      margin-top: 0.5vw;
     }
   }
   .examples {
@@ -377,60 +422,33 @@ export default {
       margin-bottom: 37px;
     }
     .title {
-      margin-bottom: 8px;
+      margin-bottom: 0.8vw;
     }
     .detail {
-      margin-bottom: 13px;
+      margin-bottom: 1.3vw;
     }
   }
-  @media (min-width: 768px) {
-    .thumbnail {
-      display: inline;
-      .title {
-        margin-bottom: 8px;
-      }
-      .detail {
-        margin-bottom: 13px;
-      }
-    }
-  }
-  @media (min-width: 992px) {
-    .thumbnail {
-      display: flex;
-      .title {
-        margin-bottom: 8px;
-      }
-      .detail {
-        margin-bottom: 13px;
-      }
-    }
-  }
-  @media (min-width: 1200px) {
-    .thumbnail {
-      display: flex;
-      .title {
-        margin-bottom: 16px;
-      }
-      .detail {
-        margin-bottom: 26px;
-      }
-    }
-  }
+}
+.col-sm-6 {
+  padding: 0;
+}
+.more_news_p {
+  text-align: center;
 }
 .more_news {
   border: 1px solid #ebebeb;
   font-size: 8px;
+  font-size: 0.8rem;
   color: #747c77;
-  padding: 5px 9px;
-  margin-left: 40%;
-  margin-top: 19.5px;
+  padding: 0.5vw 0.9vw;
+  margin-top: 1.95vw;
 }
 .responsive-div {
   padding: 2% 10% !important;
   box-sizing: border-box;
   h4 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
   }
   .thumbnail {
     position: relative;
@@ -441,15 +459,17 @@ export default {
     bottom: 0px;
     background: rgba(255, 255, 255, 0.88);
     width: 100%;
-    padding: 3%;
+    padding: 0.5vw;
     h5 {
       color: #303030;
       font-family: PingFangSC-Regular;
       font-size: 12px;
+      font-size: 1.2rem;
     }
   }
   .more {
     font-size: 9px;
+    font-size: 0.9rem;
     color: #747c77;
     text-align: center;
   }

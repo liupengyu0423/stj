@@ -24,11 +24,12 @@
     </div>
     <div class="footer_logo">
       <img src="../images/stj_logo_footer.png"
-           alt="">
+           alt=""
+           class="img-responsive">
     </div>
     <div class="bottom">
-      <p>页面版权所有： 生态洁环保科技股份有限公司</p>
-      <p>地址：山东省济南市莱芜区赢牟西大街003号</p>
+      <p class="left">页面版权所有： 生态洁环保科技股份有限公司</p>
+      <p class="right">地址：山东省济南市莱芜区赢牟西大街003号</p>
     </div>
   </footer>
 </template>
@@ -50,7 +51,7 @@ footer {
   width: 100%;
   max-height: 500px;
   background: #2a2f2f;
-  padding: 2.3em 3.5em 0 2.3em;
+  padding: 2.3em 3.5em 1.8vw 2.3em;
   // position: fixed;
   // bottom: 0;
   > div {
@@ -60,11 +61,21 @@ footer {
   .quickly_title,
   .call_title {
     color: #b1b1b1;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 2.8vw;
+  }
+  .call_li {
+    font-size: 13px;
+    font-size: 1.3rem;
   }
   .quickly_li,
   .call_li {
+    line-height: 3vw;
     a {
       color: #747c77 !important;
+      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
   .call {
@@ -73,6 +84,8 @@ footer {
   .hot_line_top,
   .hot_line_bot {
     color: #747c77;
+    font-size: 14px;
+    font-size: 1.4rem;
   }
   .hot_line {
     margin-top: 2em;
@@ -81,10 +94,19 @@ footer {
     float: right;
   }
   .bottom {
-    display: block;
+    // display: block;
+    padding-top: 4vw;
+    .left {
+      padding-right: 2vw;
+    }
+    .right {
+      padding-left: 2vw;
+    }
     p {
       color: #747c77;
       display: inline-block;
+      font-size: 13px;
+      font-size: 1.3vw;
       &:first-of-type {
         border-right: 1px solid #747c77;
       }
