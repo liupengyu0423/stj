@@ -76,15 +76,15 @@ export default {
       num: 'one',
       examples: [],
       examples1: [
-        { title: '国家副主席王岐山关注公司产品', img: require('../../images/l1/l1.jpg'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江…' },
-        { title: '全国人大常委会原副委员长、中华全', img: require('../../images/l1/l2.jpg'), id: 1, date: '2019-02-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
-        { title: '全国人大常委会原副委员长路甬祥参观公', img: require('../../images/l1/l3.jpg'), id: 2, date: '2019-01-01', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/l1/l4.jpg'), id: 3, date: '2018-10-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江区…' },
-        { title: '山东省省长龚正检查指导公司户厕改造工', img: require('../../images/l1/l5.jpg'), id: 4, date: '2018-07-03', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
-        { title: '原国家知识产权局长田力普来公司考察', img: require('../../images/l1/l6.jpg'), id: 5, date: '2018-02-19', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' },
-        { title: '河南省委常委、统战部部长孙守刚指导公', img: require('../../images/l1/l7.jpg'), id: 6, date: '2018-02-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装…' },
-        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l8.jpg'), id: 7, date: '2017-12-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化…' },
-        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l9.jpg'), id: 8, date: '2017-05-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间…' }
+        { title: '国家副主席王岐山关注公司产品', img: require('../../images/l1/l1.jpg'), id: 0, date: '2019-03-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗' },
+        { title: '全国人大常委会原副委员长、中华全', img: require('../../images/l1/l2.jpg'), id: 1, date: '2019-02-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体' },
+        { title: '全国人大常委会原副委员长路甬祥参观公', img: require('../../images/l1/l3.jpg'), id: 2, date: '2019-01-01', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期' },
+        { title: '农业农村部部长韩长赋参观公司产品', img: require('../../images/l1/l4.jpg'), id: 3, date: '2018-10-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装在罗江' },
+        { title: '山东省省长龚正检查指导公司户厕改造工', img: require('../../images/l1/l5.jpg'), id: 4, date: '2018-07-03', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化' },
+        { title: '原国家知识产权局长田力普来公司考察', img: require('../../images/l1/l6.jpg'), id: 5, date: '2018-02-19', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间' },
+        { title: '河南省委常委、统战部部长孙守刚指导公', img: require('../../images/l1/l7.jpg'), id: 6, date: '2018-02-08', detail: '四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装四川省农业厅副厅长杨波及各地市负责农村改厕的领导、专家在德阳市罗江区领导的陪同下参观公司安装' },
+        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l8.jpg'), id: 7, date: '2017-12-01', detail: '日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化日前，从山东省质量强省及名牌战略推进工作领导小组办公室传来喜讯，“生态洁牌农村户厕改造及生活污水一体化' },
+        { title: '住房和城乡建设部总经济师赵晖参观公司', img: require('../../images/l1/l9.jpg'), id: 8, date: '2017-05-08', detail: '全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间全国首届农村卫生厕所新技术新产品展示交流会在山东淄博国际会展中心盛大开幕，生态洁公司受邀参加。交流会期间' }
       ]
     }
   },
@@ -125,8 +125,8 @@ export default {
   .pagination > li > a,
   .pagination > li > span {
     color: #000;
-    font-size: 9px;
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-size: 0.75rem;
   }
   .active {
     color: #1aa8aa !important;
@@ -164,28 +164,35 @@ export default {
       padding: 0;
       // margin-top: 2.8vw;
       .title {
-        font-size: 14px;
-        font-size: 1.3rem;
+        font-size: 18px;
+        font-size: 0.8rem;
         color: #3e403f;
         font-family: PingFangSC-Regular;
         margin: 0 0 0.8vw;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .date {
         font-size: 12px;
-        font-size: 1.2rem;
-        color: #7a7e7c;
+        font-size: 0.5rem;
         font-family: PingFangSC-Light;
       }
       .detail {
-        font-size: 13px;
-        font-size: 1.3rem;
+        font-size: 14px;
+        font-size: 0.6rem;
         color: #3e403f;
         font-family: PingFangSC-Light;
         margin: 0.8vw 0 1.6vw;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
       }
       .learn_detail {
         font-size: 12px;
-        font-size: 1.1rem;
+        font-size: 0.5rem;
         color: #7a7e7c;
         font-family: PingFangSC-Light;
       }
@@ -207,7 +214,7 @@ export default {
       color: #f8faf9;
       font-family: PingFangSC-Regular;
       font-size: 20px;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 }

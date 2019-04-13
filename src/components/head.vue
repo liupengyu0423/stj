@@ -15,6 +15,7 @@
         <a class="navbar-brand"
            href="#"><img src="../images/stj_logo.png"
                alt="Brand"></a>
+        <span class="float">400-618-9911</span>
       </div>
     </div>
     <div class="collapse navbar-collapse navbar-right is-collapse">
@@ -76,6 +77,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar-header {
+  width: 100%;
+}
+.float {
+  float: right;
+  margin: 2vw;
+  color: #1aa8aa;
+  font-size: 18px;
+  font-size: 0.75rem;
+}
 .navbar-default {
   background: #1aa8aa;
 }

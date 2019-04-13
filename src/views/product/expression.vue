@@ -108,7 +108,7 @@ export default {
     background: #40f2d0;
     position: absolute;
     bottom: 0;
-    left: 8vw;
+    left: 9vw;
   }
   .line2 {
     width: 50px;
@@ -129,9 +129,9 @@ export default {
       line-height: 30px;
       color: #1aa8aa;
       font-family: PingFangSC-Regular;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 4vw;
+      font-size: 40px;
+      font-size: 1.7rem;
+      line-height: 5.4vw;
     }
   }
   .row {
@@ -147,8 +147,8 @@ export default {
   .nav-tabs-hover a {
     color: #303030 !important;
     display: inline;
-    font-size: 8px;
-    font-size: 0.8rem;
+    font-size: 16px;
+    font-size: 0.7rem;
   }
   .nav-tabs-hover.active a {
     color: #1aa8aa !important;
@@ -196,7 +196,7 @@ export default {
     }
     img {
       width: 100%;
-      height: 12vw;
+      height: 14vw;
       margin: 0;
     }
     .caption {

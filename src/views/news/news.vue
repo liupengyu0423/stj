@@ -137,8 +137,8 @@ export default {
   .pagination > li > a,
   .pagination > li > span {
     color: #000;
-    font-size: 9px;
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-size: 0.75rem;
   }
   .active {
     color: #1aa8aa !important;
@@ -170,23 +170,26 @@ export default {
     }
     .caption {
       padding: 0;
-      // margin-top: 2.8vw;
       .title {
-        font-size: 14px;
-        font-size: 1.3rem;
+        font-size: 18px;
+        font-size: 0.8rem;
         color: #3e403f;
         font-family: PingFangSC-Regular;
         margin: 0 0 0.8vw;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .date {
         font-size: 12px;
-        font-size: 1.2rem;
+        font-size: 0.5rem;
         color: #7a7e7c;
         font-family: PingFangSC-Light;
       }
       .detail {
-        font-size: 13px;
-        font-size: 1.3rem;
+        font-size: 14px;
+        font-size: 0.6rem;
         color: #3e403f;
         font-family: PingFangSC-Light;
         margin: 0.8vw 0 1.6vw;
@@ -197,7 +200,7 @@ export default {
       }
       .learn_detail {
         font-size: 12px;
-        font-size: 1.1rem;
+        font-size: 0.5rem;
         color: #7a7e7c;
         font-family: PingFangSC-Light;
       }
@@ -219,7 +222,7 @@ export default {
       color: #f8faf9;
       font-family: PingFangSC-Regular;
       font-size: 20px;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 }

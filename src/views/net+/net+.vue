@@ -7,7 +7,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <h4>互联网+ 智能厕所
             </h4>
             <p>借助云计算、IoT 物联网、大数据、智能运维 App、用户端智能家居 App 等前沿科技产品，让每一台生态洁环保厕所都插上科技的翅膀，数据双向互联互通，故障自动报警，售后工单自动派发，真正实现高效率、低成本的管护运维。</p>
@@ -32,7 +32,7 @@
              alt=""
              class="img-responsive">
         <div class="row row_col1">
-          <div class="row1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="row1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <h4>运维 APP
             </h4>
             <p class="top">每一台生态洁厕所，都是高效运维的典范。</p>
@@ -104,8 +104,8 @@ export default {
     }
     h4 {
       padding-top: 3vw;
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 32px;
+      font-size: 1.3rem;
       line-height: 2.45vw;
       color: #fff;
       font-family: PingFangSC-Semibold;
@@ -113,10 +113,10 @@ export default {
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 16px;
+      font-size: 0.7rem;
       margin-top: 2vw;
-      line-height: 3.2vw;
+      line-height: 4vw;
     }
   }
   .xi-col-lg-2 {
@@ -138,8 +138,8 @@ export default {
     }
     h4 {
       padding-top: 6vw;
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 32px;
+      font-size: 1.3rem;
       line-height: 2.45vw;
       color: #fff;
       font-family: PingFangSC-Semibold;
@@ -147,10 +147,10 @@ export default {
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 16px;
+      font-size: 0.7rem;
       margin-top: 2vw;
-      line-height: 3.2vw;
+      line-height: 4vw;
     }
     .top {
       margin-top: 3.2vw;
@@ -171,8 +171,8 @@ export default {
     }
     h4 {
       padding-top: 10vw;
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 32px;
+      font-size: 1.3rem;
       line-height: 24.5px;
       line-height: 4.9vw;
       color: #fff;
@@ -181,10 +181,10 @@ export default {
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 16px;
+      font-size: 0.7rem;
       margin-top: 2vw;
-      line-height: 3.2vw;
+      line-height: 4vw;
     }
   }
   .xi-col-lg-4 {
@@ -205,8 +205,8 @@ export default {
     }
     h4 {
       padding-top: 10vw;
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 32px;
+      font-size: 1.3rem;
       line-height: 24.5px;
       line-height: 4.9vw;
       color: #303030;
@@ -215,10 +215,10 @@ export default {
     p {
       color: #303030;
       font-family: PingFangSC-Regular;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 16px;
+      font-size: 0.7rem;
       margin-top: 2vw;
-      line-height: 3.2vw;
+      line-height: 4vw;
     }
     .top {
       margin-top: 3.2vw;

@@ -234,8 +234,8 @@ export default {
       }
       .date {
         font-family: PingFangSC-Semibold;
-        font-size: 16px;
-        font-size: 1.6rem;
+        font-size: 32px;
+        font-size: 1.3rem;
         color: #1aa8aa;
         &:last-of-type {
           position: relative;
@@ -292,19 +292,20 @@ export default {
       }
       .text {
         font-family: PingFangSC-Light;
-        font-size: 8px;
-        font-size: 0.8rem;
+        font-size: 16px;
+        font-size: 0.7rem;
         color: #303030;
         letter-spacing: -0.04;
         text-align: justify;
         line-height: 3vw;
         padding-left: 5.9vw;
         border-left: 1px solid #1aa8aa;
+        margin-left: 3vw;
       }
       .text p {
         font-family: PingFangSC-Light;
-        font-size: 8px;
-        font-size: 0.8rem;
+        font-size: 16px;
+        font-size: 0.7rem;
         color: #303030;
         &:nth-child(2) {
           margin-top: 2vw;
@@ -341,8 +342,8 @@ export default {
       }
     }
     h4 {
-      font-size: 16px;
-      font-size: 1.6rem;
+      font-size: 32px;
+      font-size: 1.3rem;
       line-height: 24.5px;
       line-height: 4.9vw;
       color: #fff;
@@ -351,8 +352,8 @@ export default {
     p {
       color: #fff;
       font-family: PingFangSC-Regular;
-      font-size: 10px;
-      font-size: 1rem;
+      font-size: 20px;
+      font-size: 。8rem;
       margin-top: 2vw;
     }
   }
@@ -406,8 +407,8 @@ export default {
     background: #ebf4f4;
   }
   h6 {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 32px;
+    font-size: 1.3rem;
     margin: 6vw 0 2.8vw 7vw;
     font-family: PingFangSC-Semibold;
     color: #303030;
@@ -415,8 +416,8 @@ export default {
   p.two_title,
   p.laster {
     color: #1aa8aa;
-    font-size: 9px;
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-size: 0.75rem;
     margin: 0 0 1.9vw 7vw;
     font-family: PingFangSC-Light;
   }
@@ -429,8 +430,8 @@ export default {
   }
   p.content {
     color: #303030;
-    font-size: 8px;
-    font-size: 0.8rem;
+    font-size: 16px;
+    font-size: 0.65rem;
     font-family: PingFangSC-Light;
     margin: 0 0 1.45vw 7vw;
   }
@@ -444,14 +445,14 @@ export default {
   }
   .bottom_intro p {
     color: #303030;
-    font-size: 9px;
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-size: 0.75rem;
     line-height: 4vw;
   }
   .bottom_intro h4 {
     color: #303030;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 32px;
+    font-size: 1.3rem;
     margin-bottom: 5.6vw !important;
     font-family: PingFangSC-Semibold;
   }
@@ -471,7 +472,7 @@ export default {
     }
     img {
       width: 100%;
-      height: 14vw;
+      height: 16vw;
       margin: 0;
     }
     .caption {
@@ -483,8 +484,8 @@ export default {
       h5 {
         color: #303030;
         font-family: PingFangSC-Regular;
-        font-size: 9px;
-        font-size: 0.9rem;
+        font-size: 18px;
+        font-size: 0.75rem;
         text-align: left;
       }
     }
