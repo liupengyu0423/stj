@@ -183,8 +183,19 @@ export default {
     border-color: #fff;
   }
   .row.examples {
-    margin: 2vw 10vw;
-    padding-top: 2.6vw;
+    padding: 60px 4% 50px 11% !important;
+    .col-sm-4,
+    .col-lg-4,
+    .col-md-4,
+    .col-xs-4 {
+      padding: 0;
+      margin: 2vw 0;
+      // margin-left: 0.5vw;
+    }
+    .bottom_intro2 {
+      padding: 0;
+      padding-left: 6vw;
+    }
     h4 {
       text-align: center;
       margin-bottom: 2vw;
@@ -195,15 +206,15 @@ export default {
       padding: 0;
     }
     img {
-      width: 100%;
-      height: 14vw;
+      width: 28vw;
+      height: 17.5vw;
       margin: 0;
     }
     .caption {
       position: absolute;
       bottom: 0;
       background: #1aa8aa;
-      width: 100%;
+      width: 28vw;
       opacity: 0.8;
       padding: 0.5vw;
       h5 {

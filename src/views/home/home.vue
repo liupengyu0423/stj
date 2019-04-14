@@ -431,10 +431,12 @@ export default {
       margin-bottom: 37px;
       .caption {
         height: 100%;
+        width: 50%;
       }
     }
     .title {
       margin-bottom: 0.8vw;
+      width: 100%;
     }
     .detail {
       margin-bottom: 0.6vw;
@@ -442,7 +444,7 @@ export default {
   }
 }
 .col-sm-6 {
-  padding: 0 2vw;
+  // padding: 0 2vw;
 }
 .more_news_p {
   text-align: center;
@@ -456,8 +458,20 @@ export default {
   margin-top: 1.95vw;
 }
 .responsive-div {
-  padding: 2% 10% !important;
+  // padding: 2vw 5vw !important;
   box-sizing: border-box;
+  .col-sm-4,
+  .col-lg-4,
+  .col-md-4,
+  .col-xs-4 {
+    padding: 0;
+    margin: 2vw 0;
+    // margin-left: 0.5vw;
+  }
+  .bottom_intro2 {
+    padding: 0;
+    padding-left: 3vw;
+  }
   h4 {
     text-align: center;
     margin-bottom: 2vw;
@@ -467,9 +481,10 @@ export default {
     border: none;
   }
   img {
-    width: 19vw;
-    height: 12vw;
+    width: 28vw;
+    height: 17.5vw;
     margin: 0;
+    padding: 1vw;
   }
   .caption {
     position: absolute;

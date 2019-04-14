@@ -20,7 +20,7 @@
           <div class="caption">
             <p class="title">{{item.title}}</p>
             <p class="date">{{item.date}}</p>
-            <p class="detail">{{item.detail}}</p>
+            <!-- <p class="detail">{{item.detail}}</p> -->
             <a :href="'/leader/detail/'+item.id"
                class="learn_detail"
                @click="learn_detail(item)">了解详情</a>
@@ -158,7 +158,7 @@ export default {
     .thumbnail > img {
       margin: 0;
       width: 100%;
-      height: 24vw;
+      height: 18vw;
     }
     .caption {
       padding: 0;
@@ -168,7 +168,7 @@ export default {
         font-size: 0.8rem;
         color: #3e403f;
         font-family: PingFangSC-Regular;
-        margin: 0 0 0.8vw;
+        margin: 0.8vw 0 0.8vw;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -178,6 +178,7 @@ export default {
         font-size: 12px;
         font-size: 0.5rem;
         font-family: PingFangSC-Light;
+        margin-bottom: 1vw;
       }
       .detail {
         font-size: 14px;

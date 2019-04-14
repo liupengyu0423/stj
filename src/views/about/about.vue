@@ -463,23 +463,39 @@ export default {
     color: #1aa8aa;
   }
   .responsive-div {
-    padding: 0 7vw !important;
+    padding: 0 3vw !important;
     box-sizing: border-box;
+    .col-sm-4,
+    .col-lg-4,
+    .col-md-4,
+    .col-xs-4 {
+      padding: 0;
+      margin: 2vw 0;
+      // margin-left: 0.5vw;
+    }
+    .bottom_intro2 {
+      padding-left: 6vw;
+    }
+    // .bottom_intro2 {
+    //   padding: 0;
+    //   padding-left: 6vw;
+    // }
     .thumbnail {
       position: relative;
       border: none;
       padding: 0;
+      background: transparent;
     }
     img {
-      width: 100%;
-      height: 16vw;
+      width: 28vw;
+      height: 18vw;
       margin: 0;
     }
     .caption {
       position: absolute;
       bottom: 0;
       background: rgba(255, 255, 255, 0.88);
-      width: 100%;
+      width: 28vw;
       padding: 0.7vw 1vw;
       h5 {
         color: #303030;

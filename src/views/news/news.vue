@@ -164,9 +164,8 @@ export default {
     }
     .thumbnail a > img,
     .thumbnail > img {
-      margin: 0;
       width: 100%;
-      height: 24vw;
+      height: 18vw;
     }
     .caption {
       padding: 0;
@@ -175,7 +174,7 @@ export default {
         font-size: 0.8rem;
         color: #3e403f;
         font-family: PingFangSC-Regular;
-        margin: 0 0 0.8vw;
+        margin: 0.8vw 0 0.8vw;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;

@@ -58,7 +58,7 @@ footer {
   width: 100%;
   max-height: 500px;
   background: #2a2f2f;
-  padding: 2.3em 3.5em 1.8vw 2.3em;
+  padding: 1.5em 3.5em 1.8vw 2.3em;
   // position: fixed;
   // bottom: 0;
   .img-responsive {
@@ -73,8 +73,8 @@ footer {
   .call_title {
     color: #b1b1b1;
     font-size: 16px;
-    font-size: 0.7rem;
-    margin-bottom: 2.8vw;
+    font-size: 0.6rem;
+    margin-bottom: 1vw;
   }
   .quickly_li,
   .call_li {
@@ -84,7 +84,7 @@ footer {
     a {
       color: #747c77 !important;
       font-size: 14px;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
     }
   }
   .call {
@@ -94,11 +94,11 @@ footer {
   .hot_line_bot {
     color: #747c77;
     font-size: 14px;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .hot_line_bot {
     font-size: 20px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .hot_line {
     margin-top: 2em;
@@ -123,7 +123,7 @@ footer {
       color: #747c77;
       display: inline-block;
       font-size: 13px;
-      font-size: 1.3vw;
+      font-size: 0.5vw;
       &:first-of-type {
         border-right: 1px solid #747c77;
       }

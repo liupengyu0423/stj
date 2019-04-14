@@ -244,7 +244,7 @@
            v-if="click===0">
         <h4>应用案例</h4>
         <div class="row">
-          <div class="col-sm-6 col-md-4"
+          <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
                v-for="(item,index) in examples"
                :key="index">
             <div class="thumbnail">
@@ -263,7 +263,7 @@
            v-if="click===1">
         <h4>产品展示</h4>
         <div class="row">
-          <div class="col-sm-6 col-md-4"
+          <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"
                v-for="(item,index) in examples"
                :key="index">
             <div class="thumbnail">
@@ -355,6 +355,24 @@ export default {
     height: 100%;
   }
 }
+.row-lg-1 {
+  padding: 55% 0 0;
+}
+@media (min-width: 1200px) {
+  .row-lg-1 {
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .row-lg-1 {
+    padding-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .row-lg-1 {
+    padding-top: 0;
+  }
+}
 .list-group {
   display: flex;
   margin-bottom: 0;
@@ -439,7 +457,7 @@ export default {
   width: 100%;
   background: url("../../images/wc.png") #ebf4f4 no-repeat;
   background-size: contain;
-  background-position: 90% center;
+  background-position: 90% top;
 }
 .responsive-div2 {
   width: 100%;
@@ -539,7 +557,7 @@ export default {
   // }
   .list-group {
     flex-direction: column;
-    padding: 0 0 120px 70px;
+    // padding: 0 0 120px 70px;
     h4 {
       margin-bottom: 30px;
       font-family: PingFangSC-Semibold;
@@ -569,17 +587,35 @@ export default {
 .responsive-div3_single {
   background: url("../../images/single.png") no-repeat;
   background-size: contain;
-  background-position: 70% center;
+  background-position: 70% top;
 }
 .responsive-div3_much {
   background: url("../../images/much.png") no-repeat;
   background-size: contain;
-  background-position: 70% center;
+  background-position: 70% top;
 }
 .responsive-div3_center {
   background: url("../../images/center.png") no-repeat;
   background-size: contain;
-  background-position: 70% center;
+  background-position: 70% top;
+}
+.list-group {
+  padding: 55% 0 120px 70px !important;
+}
+@media (min-width: 1200px) {
+  .list-group {
+    padding: 0 0 120px 70px !important;
+  }
+}
+@media (min-width: 992px) {
+  .list-group {
+    padding: 0 0 120px 70px !important;
+  }
+}
+@media (min-width: 768px) {
+  .list-group {
+    padding: 0 0 120px 70px !important;
+  }
 }
 .responsive-div4 {
   width: 100%;
@@ -619,9 +655,21 @@ export default {
   }
 }
 .responsive-div6 {
-  padding: 60px 10% 50px !important;
+  padding: 60px 4% 50px 11% !important;
   box-sizing: border-box;
   background: #ebf4f4;
+  .col-sm-4,
+  .col-lg-4,
+  .col-md-4,
+  .col-xs-4 {
+    padding: 0;
+    margin: 2vw 0;
+    // margin-left: 0.5vw;
+  }
+  .bottom_intro2 {
+    padding: 0;
+    padding-left: 6vw;
+  }
   // margin-top: 50px;
   h4 {
     text-align: center;
@@ -635,15 +683,15 @@ export default {
     padding: 0;
   }
   img {
-    width: 100%;
-    height: 12vw;
+    width: 28vw;
+    height: 17.5vw;
     margin: 0;
   }
   .caption {
     position: absolute;
     bottom: 0;
     background: #1aa8aa;
-    width: 100%;
+    width: 28vw;
     opacity: 0.8;
     padding: 3%;
     h5 {
